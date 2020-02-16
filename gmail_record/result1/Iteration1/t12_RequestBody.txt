@@ -1,0 +1,6 @@
+"_token=99bd1d7986a134c2aaf05c0d66ee4104&_task=mail&_action=send&_id=10168630305e486a911e994&_a"
+"ttachments=&_from=5936460&_to=d4gon1093%40yandex.ru&_cc=&_bcc=&_replyto=&_followupto=&_subject"
+"=first+quote&editorSelector=plain&_priority=0&_store_target=Sent&_draft_saveid=&_draft=&_is_pl"
+"ain=1&_framed=1&_message=%3Cp%3EThere+is+no+such+thing+as+an+accident.+What+we+call+by+that+na"
+"me+is+the+effect+of+some+cause+which+we+do+not+see.%3C%2Fp%3E%0D%0A%3Cdiv+id%3D%22_rc_sig%22%3"
+"E--+%3Cbr+%2F%3E%0D%0A%3Cp%3ESasha+90233%3C%2Fp%3E%0D%0A%3C%2Fdiv%3E"

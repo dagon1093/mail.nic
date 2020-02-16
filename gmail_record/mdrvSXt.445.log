@@ -1,0 +1,16 @@
+Error: missing newline in C:\Users\lol\Documents\VuGen\Scripts\gmail_record\title.dat	[MsgId: MERR-13874]
+Error: missing newline in C:\Users\lol\Documents\VuGen\Scripts\gmail_record\email_pswd.dat	[MsgId: MERR-13874]
+Error: missing newline in C:\Users\lol\Documents\VuGen\Scripts\gmail_record\adr_email.dat	[MsgId: MERR-13874]
+Error: missing newline in C:\Users\lol\Documents\VuGen\Scripts\gmail_record\signature.dat	[MsgId: MERR-13874]
+Start auto log messages stack - Iteration 144.	[MsgId: MMSG-10545]
+Action.c(35): Found resource "https://www.mail.nic.ru/js/bundle.b90153805f5b1456af65.js" in HTML "https://www.mail.nic.ru/"  	[MsgId: MMSG-26659]
+Action.c(35): Warning -27792: Failed to connect to server "fonts.googleapis.com:443": [10060] Connection timed out  	[MsgId: MWAR-27792]
+Action.c(35): Registered web_reg_find successful for "Text=Электронная почта от RU-CENTER" (count=1)  	[MsgId: MMSG-26364]
+Action.c(35): web_url("www.mail.nic.ru") highest severity level was "warning", 326894 body bytes, 1240 header bytes  	[MsgId: MMSG-26388]
+Action.c(45): Notify: Transaction "0_homepage" ended with a "Pass" status (Duration: 30,0444 Wasted Time: 0,0016).	[MsgId: MMSG-16871]
+Action.c(51): Notify: Transaction "1_login" started.	[MsgId: MMSG-16999]
+Action.c(53): web_custom_request("json_auth.php") started  	[MsgId: MMSG-26355]
+Action.c(53): Error -27792: Failed to connect to server "mail.nic.ru:443": [10060] Connection timed out  	[MsgId: MERR-27792]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+

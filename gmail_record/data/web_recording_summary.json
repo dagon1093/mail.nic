@@ -1,0 +1,1401 @@
+{
+  "FilterHeaders": [
+    {
+      "Header": "x-roundcube-request",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "x-requested-with",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "user-agent",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "upgrade-insecure-requests",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "sec-fetch-user",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "sec-fetch-site",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "sec-fetch-mode",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "origin",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "if-none-match",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "if-modified-since",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "cache-control",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "access-control-request-method",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "access-control-request-headers",
+      "IncludeInScript": true
+    },
+    {
+      "Header": "accept-language",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "accept-encoding",
+      "IncludeInScript": false
+    },
+    {
+      "Header": "accept",
+      "IncludeInScript": false
+    }
+  ],
+  "FilterResources": [
+    {
+      "IsNonResource": false,
+      "type": "text/plain"
+    },
+    {
+      "IsNonResource": true,
+      "type": "text/html"
+    },
+    {
+      "IsNonResource": false,
+      "type": "text/css"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/vnd.microsoft.icon"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/tiff"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/png"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/jpeg"
+    },
+    {
+      "IsNonResource": false,
+      "type": "image/gif"
+    },
+    {
+      "IsNonResource": true,
+      "type": "application/json"
+    },
+    {
+      "IsNonResource": false,
+      "type": "application/javascript"
+    },
+    {
+      "IsNonResource": false,
+      "type": "application/font-woff"
+    }
+  ],
+  "GeneralInfo": {
+    "BrowserVersion": "",
+    "IsWinInetMode": false,
+    "MaxUsedConnections": 14,
+    "RecordedBrowser": "Chrome",
+    "RecordingDate": "Р В Р’В Р вЂ™Р’В Р В Р’В Р Р†Р вЂљР’В¦Р В Р’В Р вЂ™Р’В Р В Р Р‹Р Р†Р вЂљРЎС›Р В Р’В Р В Р вЂ№Р В Р’В Р В Р РЏ-05-2019",
+    "RecordingDuration": 217544,
+    "RecordingMode": "N/A",
+    "RecordingTimeStamp": 1572981154,
+    "RecordingType": "Browser",
+    "TotalBytesReceived": 2448579,
+    "TotalBytesSent": 68344,
+    "TotalRequests": 95,
+    "UserAgent": "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36"
+  },
+  "HostInfo": [
+    {
+      "DomainName": "storage.nic.ru",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "31.177.76.21",
+          "IncludeInScript": false,
+          "Name": "storage.nic.ru",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "image/jpeg",
+              "DownloadTime": 16,
+              "EventId": 6650,
+              "HttpStatus": 200,
+              "Size": 120647,
+              "URL": "https://storage.nic.ru/ru/images/jpg/shutte1.jpg"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/jpeg",
+              "DownloadTime": 16,
+              "EventId": 5745,
+              "HttpStatus": 200,
+              "Size": 229973,
+              "URL": "https://storage.nic.ru/ru/images/jpg/shut4.jpg"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "mail.nic.ru",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "31.177.76.19",
+          "IncludeInScript": true,
+          "Name": "www.mail.nic.ru",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 15,
+              "EventId": 6628,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://www.mail.nic.ru/"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 16,
+              "EventId": 5839,
+              "HttpStatus": 200,
+              "Size": 394,
+              "URL": "https://www.mail.nic.ru/favicon.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 5675,
+              "HttpStatus": 200,
+              "Size": 224675,
+              "URL": "https://www.mail.nic.ru/js/bundle.b90153805f5b1456af65.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 5663,
+              "HttpStatus": 200,
+              "Size": 90318,
+              "URL": "https://www.mail.nic.ru/js/babel-polyfill.b90153805f5b1456af65.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 5657,
+              "HttpStatus": 200,
+              "Size": 448,
+              "URL": "https://www.mail.nic.ru/bootstrap.js"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 16,
+              "EventId": 5620,
+              "HttpStatus": 200,
+              "Size": 9878,
+              "URL": "https://www.mail.nic.ru/js/om-styles.css?b90153805f5b1456af65"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 16,
+              "EventId": 5540,
+              "HttpStatus": 200,
+              "Size": 1575,
+              "URL": "https://www.mail.nic.ru/"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "194.85.88.240",
+          "IncludeInScript": true,
+          "Name": "mail.nic.ru",
+          "Port": 80,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 16,
+              "EventId": 6614,
+              "HttpStatus": 301,
+              "Size": 185,
+              "URL": "http://mail.nic.ru/"
+            }
+          ],
+          "SSLCipher": "None",
+          "SSLVersion": "None"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "194.85.88.240",
+          "IncludeInScript": true,
+          "Name": "mail.nic.ru",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 15,
+              "EventId": 6616,
+              "HttpStatus": 200,
+              "Size": 9775,
+              "URL": "https://mail.nic.ru/"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 78,
+              "EventId": 6610,
+              "HttpStatus": 307,
+              "Size": 0,
+              "URL": "https://mail.nic.ru/roundcubemail/?_task=logout&_token=bb63484f71116a8a998676db194f2039"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/plain",
+              "DownloadTime": 234,
+              "EventId": 6599,
+              "HttpStatus": 200,
+              "Size": 20660,
+              "URL": "https://mail.nic.ru/roundcubemail/?_task=mail&_refresh=1&_mbox=INBOX&_remote=1&_unlock=loading1573069503444&_action=list&_=1573069503296"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/plain",
+              "DownloadTime": 93,
+              "EventId": 6597,
+              "HttpStatus": 200,
+              "Size": 324,
+              "URL": "https://mail.nic.ru/roundcubemail/?_task=mail&_remote=1&_unlock=0&_action=getunread&_=1573069503297"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 16,
+              "EventId": 6579,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/outlook/watermark.html"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 0,
+              "EventId": 6577,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/outlook/watermark.html"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 125,
+              "EventId": 6554,
+              "HttpStatus": 200,
+              "Size": 51242,
+              "URL": "https://mail.nic.ru/roundcubemail/?_task=mail&_refresh=1&_mbox=INBOX"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 421,
+              "EventId": 6550,
+              "HttpStatus": 200,
+              "Size": 537,
+              "URL": "https://mail.nic.ru/roundcubemail/?_task=mail&_unlock=loading1573069502049&_lang=ru_RU&_framed=1"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/plain",
+              "DownloadTime": 78,
+              "EventId": 6548,
+              "HttpStatus": 200,
+              "Size": 285,
+              "URL": "https://mail.nic.ru/roundcubemail/?_task=mail&_action=refresh"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/plain",
+              "DownloadTime": 62,
+              "EventId": 6544,
+              "HttpStatus": 200,
+              "Size": 316,
+              "URL": "https://mail.nic.ru/roundcubemail/?_task=mail&_action=autocomplete"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/font-woff",
+              "DownloadTime": 16,
+              "EventId": 6539,
+              "HttpStatus": 200,
+              "Size": 9000,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/tinymce/skins/lightgray/fonts/tinymce-small.woff"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 16,
+              "EventId": 6534,
+              "HttpStatus": 200,
+              "Size": 382,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/tinymce/roundcube/content.css?s=4010900"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 16,
+              "EventId": 6532,
+              "HttpStatus": 200,
+              "Size": 1534,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/tinymce/skins/lightgray/content.min.css?s=4010900"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 0,
+              "EventId": 6520,
+              "HttpStatus": 200,
+              "Size": 34058,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/tinymce/skins/lightgray/skin.min.css?s=4010900"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 0,
+              "EventId": 6518,
+              "HttpStatus": 200,
+              "Size": 421,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/larry/images/filedrop.png?v=ba79.421"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 31,
+              "EventId": 6501,
+              "HttpStatus": 200,
+              "Size": 9397,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/tinymce/plugins/spellchecker/plugin.min.js?s=4010900"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 31,
+              "EventId": 6498,
+              "HttpStatus": 200,
+              "Size": 3800,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/tinymce/plugins/textcolor/plugin.min.js?s=4010900"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 31,
+              "EventId": 6495,
+              "HttpStatus": 200,
+              "Size": 6301,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/tinymce/plugins/searchreplace/plugin.min.js?s=4010900"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 15,
+              "EventId": 6492,
+              "HttpStatus": 200,
+              "Size": 1258,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/tinymce/plugins/tabfocus/plugin.min.js?s=4010900"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 31,
+              "EventId": 6490,
+              "HttpStatus": 200,
+              "Size": 29672,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/tinymce/plugins/table/plugin.min.js?s=4010900"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 6488,
+              "HttpStatus": 200,
+              "Size": 15078,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/tinymce/plugins/paste/plugin.min.js?s=4010900"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 15,
+              "EventId": 6484,
+              "HttpStatus": 200,
+              "Size": 655,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/tinymce/plugins/nonbreaking/plugin.min.js?s=4010900"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 6480,
+              "HttpStatus": 200,
+              "Size": 9935,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/tinymce/plugins/media/plugin.min.js?s=4010900"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 156,
+              "EventId": 6478,
+              "HttpStatus": 200,
+              "Size": 6962,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/tinymce/plugins/image/plugin.min.js?s=4010900"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 156,
+              "EventId": 6475,
+              "HttpStatus": 200,
+              "Size": 4492,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/tinymce/plugins/link/plugin.min.js?s=4010900"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 6473,
+              "HttpStatus": 200,
+              "Size": 911,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/tinymce/plugins/emoticons/plugin.min.js?s=4010900"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 6471,
+              "HttpStatus": 200,
+              "Size": 726,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/tinymce/plugins/directionality/plugin.min.js?s=4010900"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 32,
+              "EventId": 6466,
+              "HttpStatus": 200,
+              "Size": 1222,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/tinymce/plugins/colorpicker/plugin.min.js?s=4010900"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 15,
+              "EventId": 6458,
+              "HttpStatus": 200,
+              "Size": 721,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/tinymce/plugins/code/plugin.min.js?s=4010900"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 31,
+              "EventId": 6456,
+              "HttpStatus": 200,
+              "Size": 7416,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/tinymce/plugins/charmap/plugin.min.js?s=4010900"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 31,
+              "EventId": 6453,
+              "HttpStatus": 200,
+              "Size": 1856,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/tinymce/plugins/autolink/plugin.min.js?s=4010900"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 15,
+              "EventId": 6450,
+              "HttpStatus": 200,
+              "Size": 6431,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/tinymce/themes/modern/theme.min.js?s=4010900"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 15,
+              "EventId": 6448,
+              "HttpStatus": 200,
+              "Size": 20319,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/tinymce/langs/ru.js?s=4010900"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 16,
+              "EventId": 6446,
+              "HttpStatus": 200,
+              "Size": 110,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/larry/images/googiespell/change_lang.gif"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 16,
+              "EventId": 6444,
+              "HttpStatus": 200,
+              "Size": 54,
+              "URL": "https://mail.nic.ru/roundcubemail/program/resources/blank.gif"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 31,
+              "EventId": 6363,
+              "HttpStatus": 200,
+              "Size": 14425,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/editor.min.js?s=1493368164"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 6360,
+              "HttpStatus": 200,
+              "Size": 20989,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/googiespell.min.js?s=1493368164"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 6358,
+              "HttpStatus": 200,
+              "Size": 307938,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/tinymce/tinymce.min.js?s=1493368164"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 15,
+              "EventId": 6356,
+              "HttpStatus": 200,
+              "Size": 1087,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/larry/googiespell.min.css?s=1493368165"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 16,
+              "EventId": 6354,
+              "HttpStatus": 200,
+              "Size": 1755,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/tinymce/roundcube/browser.css?s=1493368164"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 109,
+              "EventId": 6339,
+              "HttpStatus": 200,
+              "Size": 38929,
+              "URL": "https://mail.nic.ru/roundcubemail/?_task=mail&_action=compose&_id=3693747465dc3227acb0dc"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 78,
+              "EventId": 6337,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://mail.nic.ru/roundcubemail/?_task=mail&_mbox=INBOX&_action=compose"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/vnd.microsoft.icon",
+              "DownloadTime": 15,
+              "EventId": 6316,
+              "HttpStatus": 200,
+              "Size": 34494,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/larry/images/favicon.ico"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/jpeg",
+              "DownloadTime": 31,
+              "EventId": 6273,
+              "HttpStatus": 200,
+              "Size": 691,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/outlook/common/watermark.jpg?v=e784.5000"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/plain",
+              "DownloadTime": 141,
+              "EventId": 6259,
+              "HttpStatus": 200,
+              "Size": 495,
+              "URL": "https://mail.nic.ru/roundcubemail/?_task=mail&_remote=1&_unlock=0&_action=getunread&_=1573069415733"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/plain",
+              "DownloadTime": 125,
+              "EventId": 6254,
+              "HttpStatus": 200,
+              "Size": 20660,
+              "URL": "https://mail.nic.ru/roundcubemail/?_task=mail&_refresh=1&_mbox=INBOX&_remote=1&_unlock=loading1573069416276&_action=list&_=1573069415732"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/tiff",
+              "DownloadTime": 31,
+              "EventId": 6240,
+              "HttpStatus": 200,
+              "Size": 270,
+              "URL": "https://mail.nic.ru/roundcubemail/program/resources/blank.tif"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/font-woff",
+              "DownloadTime": 31,
+              "EventId": 6236,
+              "HttpStatus": 200,
+              "Size": 212736,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/outlook/skin/fonts/JLrcxvhkM17op1c4raL9Fg.woff"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/font-woff",
+              "DownloadTime": 15,
+              "EventId": 6234,
+              "HttpStatus": 200,
+              "Size": 65452,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/outlook/common/icons_fa/fontawesome-webfont.woff?v=4.1.0"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 16,
+              "EventId": 6231,
+              "HttpStatus": 200,
+              "Size": 1737,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/outlook/skin/images/loader.gif"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "",
+              "DownloadTime": 0,
+              "EventId": 6228,
+              "HttpStatus": 304,
+              "Size": 0,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/outlook/watermark.html"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 0,
+              "EventId": 6226,
+              "HttpStatus": 200,
+              "Size": 136,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/larry/images/splitter.png?v=2724.136"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 15,
+              "EventId": 6223,
+              "HttpStatus": 200,
+              "Size": 1800,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/outlook/skin/images/quota.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 16,
+              "EventId": 6217,
+              "HttpStatus": 200,
+              "Size": 15699,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/larry/images/buttons.png?v=51d4.15699"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 0,
+              "EventId": 6215,
+              "HttpStatus": 200,
+              "Size": 227,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/outlook/watermark.html"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 156,
+              "EventId": 6172,
+              "HttpStatus": 200,
+              "Size": 3183,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/outlook/skin/images/logo.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "image/png",
+              "DownloadTime": 15,
+              "EventId": 6160,
+              "HttpStatus": 200,
+              "Size": 3792,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/larry/images/roundcube_logo.png"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 6156,
+              "HttpStatus": 200,
+              "Size": 1237,
+              "URL": "https://mail.nic.ru/roundcubemail/plugins/jqueryui/js/i18n/jquery.ui.datepicker-ru.js?s=1493368164"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 0,
+              "EventId": 6154,
+              "HttpStatus": 200,
+              "Size": 236099,
+              "URL": "https://mail.nic.ru/roundcubemail/plugins/jqueryui/js/jquery-ui-1.10.4.custom.min.js?s=1493368164"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 6125,
+              "HttpStatus": 200,
+              "Size": 1028,
+              "URL": "https://mail.nic.ru/roundcubemail/plugins/rcs_skins/scripts.js?s=1461156894"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 6110,
+              "HttpStatus": 200,
+              "Size": 4815,
+              "URL": "https://mail.nic.ru/roundcubemail/plugins/markasjunk2/markasjunk2.js?s=1459956190"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 6108,
+              "HttpStatus": 200,
+              "Size": 26297,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/list.min.js?s=1493368164"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 47,
+              "EventId": 6106,
+              "HttpStatus": 200,
+              "Size": 13153,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/treelist.min.js?s=1493368164"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 6098,
+              "HttpStatus": 200,
+              "Size": 143377,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/app.min.js?s=1493368164"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 31,
+              "EventId": 6077,
+              "HttpStatus": 200,
+              "Size": 14812,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/common.min.js?s=1493368164"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 31,
+              "EventId": 6071,
+              "HttpStatus": 200,
+              "Size": 2741,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/outlook/skin/colors.min.js?s=1461156894"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 31,
+              "EventId": 6068,
+              "HttpStatus": 200,
+              "Size": 8103,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/outlook/common/common.min.js?s=1461156894"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 15,
+              "EventId": 6066,
+              "HttpStatus": 200,
+              "Size": 85691,
+              "URL": "https://mail.nic.ru/roundcubemail/program/js/jquery.min.js?s=1493368164"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 31,
+              "EventId": 6064,
+              "HttpStatus": 200,
+              "Size": 2928,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/outlook/skin/skin_desktop.css?s=1461156894"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 16,
+              "EventId": 6062,
+              "HttpStatus": 200,
+              "Size": 25606,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/larry/ui.min.js?s=1493368165"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 31,
+              "EventId": 6058,
+              "HttpStatus": 200,
+              "Size": 1142,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/outlook/common/remove_list_icons.css?s=1461156894"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 31,
+              "EventId": 6053,
+              "HttpStatus": 200,
+              "Size": 7299,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/outlook/common/ic_fa_desktop.css?s=1461156894"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 16,
+              "EventId": 6049,
+              "HttpStatus": 200,
+              "Size": 4190,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/outlook/common/st_menus_desktop.css?s=1461156894"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 16,
+              "EventId": 6041,
+              "HttpStatus": 200,
+              "Size": 2678,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/outlook/common/st_buttons_desktop.css?s=1461156894"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 16,
+              "EventId": 6033,
+              "HttpStatus": 200,
+              "Size": 10741,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/outlook/common/desktop.css?s=1461156894"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 0,
+              "EventId": 6026,
+              "HttpStatus": 200,
+              "Size": 4781,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/outlook/common/common.css?s=1461156894"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 16,
+              "EventId": 6022,
+              "HttpStatus": 200,
+              "Size": 43661,
+              "URL": "https://mail.nic.ru/roundcubemail/plugins/jqueryui/themes/larry/jquery-ui-1.10.4.custom.css?s=1493368164"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 31,
+              "EventId": 6017,
+              "HttpStatus": 200,
+              "Size": 444,
+              "URL": "https://mail.nic.ru/roundcubemail/plugins/rcs_skins/styles.css?s=1461156894"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 16,
+              "EventId": 6012,
+              "HttpStatus": 200,
+              "Size": 918,
+              "URL": "https://mail.nic.ru/roundcubemail/plugins/markasjunk2/skins/larry/markasjunk2.css?s=1459956190"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 16,
+              "EventId": 6009,
+              "HttpStatus": 200,
+              "Size": 21900,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/larry/mail.min.css?s=1493368165"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/css",
+              "DownloadTime": 16,
+              "EventId": 5979,
+              "HttpStatus": 200,
+              "Size": 53076,
+              "URL": "https://mail.nic.ru/roundcubemail/skins/larry/styles.min.css?s=1493368165"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 125,
+              "EventId": 5965,
+              "HttpStatus": 200,
+              "Size": 51242,
+              "URL": "https://mail.nic.ru/roundcubemail/?_task=mail"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 484,
+              "EventId": 5962,
+              "HttpStatus": 200,
+              "Size": 91,
+              "URL": "https://mail.nic.ru/proxy/json_auth.php"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 5024,
+              "EventId": 5960,
+              "HttpStatus": 401,
+              "Size": 91,
+              "URL": "https://mail.nic.ru/proxy/json_auth.php"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/json",
+              "DownloadTime": 16,
+              "EventId": 5944,
+              "HttpStatus": 204,
+              "Size": 0,
+              "URL": "https://mail.nic.ru/proxy/json_auth.php"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "gvt2.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "64.233.165.94",
+          "IncludeInScript": false,
+          "Name": "beacons.gcp.gvt2.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "application/javascript",
+              "DownloadTime": 172,
+              "EventId": 5956,
+              "HttpStatus": 200,
+              "Size": 0,
+              "URL": "https://beacons.gcp.gvt2.com/domainreliability/upload"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "gstatic.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "64.233.161.94",
+          "IncludeInScript": false,
+          "Name": "www.gstatic.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 31,
+              "EventId": 5920,
+              "HttpStatus": 200,
+              "Size": 2017,
+              "URL": "https://www.gstatic.com/chrome/config/plugins_3/plugins_win.json"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 16,
+              "EventId": 5544,
+              "HttpStatus": 200,
+              "Size": 82,
+              "URL": "https://www.gstatic.com/autofill/weekly/merchants.json"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/json",
+              "DownloadTime": 31,
+              "EventId": 5542,
+              "HttpStatus": 200,
+              "Size": 76,
+              "URL": "https://www.gstatic.com/autofill/hourly/bins.json"
+            }
+          ],
+          "SSLCipher": "",
+          "SSLVersion": ""
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "64.233.162.94",
+          "IncludeInScript": false,
+          "Name": "ssl.gstatic.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "application/octet-stream",
+              "DownloadTime": 31,
+              "EventId": 5578,
+              "HttpStatus": 200,
+              "Size": 77948,
+              "URL": "https://ssl.gstatic.com/safebrowsing/csd/client_model_v5_variation_0.pb"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "application/octet-stream",
+              "DownloadTime": 15,
+              "EventId": 5549,
+              "HttpStatus": 200,
+              "Size": 77948,
+              "URL": "https://ssl.gstatic.com/safebrowsing/csd/client_model_v5_ext_variation_0.pb"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "64.233.162.94",
+          "IncludeInScript": false,
+          "Name": "fonts.gstatic.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "font/woff2",
+              "DownloadTime": 31,
+              "EventId": 5907,
+              "HttpStatus": 200,
+              "Size": 10504,
+              "URL": "https://fonts.gstatic.com/s/notosans/v9/o-0IIpQlx3QUlC5A4PNr4TRAW_0.woff2"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "font/woff2",
+              "DownloadTime": 46,
+              "EventId": 5874,
+              "HttpStatus": 200,
+              "Size": 16180,
+              "URL": "https://fonts.gstatic.com/s/notosans/v9/o-0NIpQlx3QUlC5A4PNjXhFVZNyB.woff2"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "font/woff2",
+              "DownloadTime": 46,
+              "EventId": 5872,
+              "HttpStatus": 200,
+              "Size": 16056,
+              "URL": "https://fonts.gstatic.com/s/notosans/v9/o-0IIpQlx3QUlC5A4PNr5TRA.woff2"
+            },
+            {
+              "CompressionType": "",
+              "DataType": "font/woff2",
+              "DownloadTime": 62,
+              "EventId": 5869,
+              "HttpStatus": 200,
+              "Size": 10812,
+              "URL": "https://fonts.gstatic.com/s/notosans/v9/o-0NIpQlx3QUlC5A4PNjXhFVYNyB1Wk.woff2"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "googleapis.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "64.233.164.95",
+          "IncludeInScript": false,
+          "Name": "safebrowsing.googleapis.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/x-protobuf",
+              "DownloadTime": 31,
+              "EventId": 6536,
+              "HttpStatus": 200,
+              "Size": 129,
+              "URL": "https://safebrowsing.googleapis.com/v4/fullHashes:find?$req=ChwKDGdvb2dsZWNocm9tZRIMNzguMC4zOTA0Ljg3EhsKDQgFEAYYASIDMDAxMAEQ37sHGgIYCjQlQjsSGwoNCAEQBhgBIgMwMDEwARCm1AYaAhgKyJ_8bBIbCg0IAxAGGAEiAzAwMTABEO7QBhoCGApjP-aIEhsKDQgHEAYYASIDMDAxMAEQ2KYGGgIYCmNEHtQSGQoNCAEQBhgBIgMwMDEwAxAUGgIYCgFXi7ASGgoNCAEQCBgBIgMwMDEwBBDRGBoCGAoYn_MDEhkKDQgJEAYYASIDMDAxMAYQAhoCGAqvu-4VEhoKDQgPEAYYASIDMDAxMAEQlRcaAhgKjtZ-7xIZCg0IChAIGAEiAzAwMTABEAUaAhgKoz4ALhIZCg0ICRAGGAEiAzAwMTABEBUaAhgKsKpbdhIaCg0ICBAGGAEiAzAwMTABEJUHGgIYCsjAsnoSGgoNCA0QBhgBIgMwMDEwARCBVBoCGAquZm4eEhsKDQgOEAYYASIDMDAxMAEQnMQCGgIYCl2tvWsSGQoNCBAQBhgBIgMwMDEwARBRGgIYCqojUi0aLAgBCAMIBQgGCAcICAgJCAoIDQgOCA8IEBABEAgaBgoEHklE-CABIAMgBCAG&$ct=application/x-protobuf&key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "application/x-protobuf",
+              "DownloadTime": 31,
+              "EventId": 6327,
+              "HttpStatus": 200,
+              "Size": 81,
+              "URL": "https://safebrowsing.googleapis.com/v4/fullHashes:find?$req=ChwKDGdvb2dsZWNocm9tZRIMNzguMC4zOTA0Ljg3EhsKDQgFEAYYASIDMDAxMAEQ37sHGgIYCjQlQjsSGwoNCAEQBhgBIgMwMDEwARCm1AYaAhgKyJ_8bBIbCg0IAxAGGAEiAzAwMTABEO7QBhoCGApjP-aIEhsKDQgHEAYYASIDMDAxMAEQ2KYGGgIYCmNEHtQSGQoNCAEQBhgBIgMwMDEwAxAUGgIYCgFXi7ASGgoNCAEQCBgBIgMwMDEwBBDRGBoCGAoYn_MDEhkKDQgJEAYYASIDMDAxMAYQAhoCGAqvu-4VEhoKDQgPEAYYASIDMDAxMAEQlRcaAhgKjtZ-7xIZCg0IChAIGAEiAzAwMTABEAUaAhgKoz4ALhIZCg0ICRAGGAEiAzAwMTABEBUaAhgKsKpbdhIaCg0ICBAGGAEiAzAwMTABEJUHGgIYCsjAsnoSGgoNCA0QBhgBIgMwMDEwARCBVBoCGAquZm4eEhsKDQgOEAYYASIDMDAxMAEQnMQCGgIYCl2tvWsSGQoNCBAQBhgBIgMwMDEwARBRGgIYCqojUi0aLAgBCAMIBQgGCAcICAgJCAoIDQgOCA8IEBABEAgaBgoEzMTUHSABIAMgBCAG&$ct=application/x-protobuf&key=AIzaSyBOti4mM-6x9WDnZIjIeyEU21OpBXqWBgw"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "64.233.163.95",
+          "IncludeInScript": false,
+          "Name": "fonts.googleapis.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "br",
+              "DataType": "text/css",
+              "DownloadTime": 32,
+              "EventId": 5711,
+              "HttpStatus": 200,
+              "Size": 614,
+              "URL": "https://fonts.googleapis.com/css?family=Noto+Sans:400,700&subset=cyrillic"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "64.233.162.95",
+          "IncludeInScript": false,
+          "Name": "content-autofill.googleapis.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/plain",
+              "DownloadTime": 31,
+              "EventId": 5775,
+              "HttpStatus": 200,
+              "Size": 45,
+              "URL": "https://content-autofill.googleapis.com/v1/pages/Chc2LjEuMTcxNS4xNDQyL2VuIChHR0xMKRIlCSfXMie7UxGWEgsN541ADhIAGgAiABILDc5BTHoSABoAIgAaAA==?alt=proto"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "google.ru",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "173.194.220.94",
+          "IncludeInScript": false,
+          "Name": "www.google.ru",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "image/gif",
+              "DownloadTime": 32,
+              "EventId": 5837,
+              "HttpStatus": 200,
+              "Size": 42,
+              "URL": "https://www.google.ru/ads/ga-audiences?v=1&aip=1&t=sr&_r=4&tid=UA-54851853-1&cid=1789073779.1573069310&jid=1335199546&_v=j79&z=277486720&slf_rd=1&random=2376726141"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "google.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "173.194.73.103",
+          "IncludeInScript": false,
+          "Name": "www.google.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 47,
+              "EventId": 5829,
+              "HttpStatus": 302,
+              "Size": 0,
+              "URL": "https://www.google.com/ads/ga-audiences?v=1&aip=1&t=sr&_r=4&tid=UA-54851853-1&cid=1789073779.1573069310&jid=1335199546&_v=j79&z=277486720"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        },
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "173.194.73.102",
+          "IncludeInScript": false,
+          "Name": "clients4.google.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/plain",
+              "DownloadTime": 62,
+              "EventId": 5824,
+              "HttpStatus": 200,
+              "Size": 22,
+              "URL": "https://clients4.google.com/rappor"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "google-analytics.com",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "173.194.222.101",
+          "IncludeInScript": false,
+          "Name": "www.google-analytics.com",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 47,
+              "EventId": 5778,
+              "HttpStatus": 302,
+              "Size": 418,
+              "URL": "https://www.google-analytics.com/r/collect?v=1&_v=j79&a=726942304&t=pageview&_s=1&dl=https%3A%2F%2Fwww.mail.nic.ru%2F&ul=ru-ru&de=UTF-8&dt=%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%BF%D0%BE%D1%87%D1%82%D0%B0%20%D0%BE%D1%82%20RU-CENTER&sd=24-bit&sr=1680x1050&vp=1680x939&je=0&_u=aGBAAEAB~&jid=1335199546&gjid=957654715&cid=1789073779.1573069310&tid=UA-54851853-1&_gid=1906821879.1573069310&_r=1&cd3=1789073779.1573069310&z=277486720"
+            },
+            {
+              "CompressionType": "gzip",
+              "DataType": "text/javascript",
+              "DownloadTime": 15,
+              "EventId": 5742,
+              "HttpStatus": 200,
+              "Size": 17803,
+              "URL": "https://www.google-analytics.com/analytics.js"
+            }
+          ],
+          "SSLCipher": "ECDHE-RSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    },
+    {
+      "DomainName": "doubleclick.net",
+      "Domains": [
+        {
+          "HTTPVersion": "HTTP/1.1",
+          "IP": "64.233.164.156",
+          "IncludeInScript": false,
+          "Name": "stats.g.doubleclick.net",
+          "Port": 443,
+          "Requests": [
+            {
+              "CompressionType": "",
+              "DataType": "text/html",
+              "DownloadTime": 31,
+              "EventId": 5806,
+              "HttpStatus": 302,
+              "Size": 366,
+              "URL": "https://stats.g.doubleclick.net/r/collect?v=1&aip=1&t=dc&_r=3&tid=UA-54851853-1&cid=1789073779.1573069310&jid=1335199546&_gid=1906821879.1573069310&gjid=957654715&_v=j79&z=277486720"
+            }
+          ],
+          "SSLCipher": "ECDHE-ECDSA-AES128-GCM-SHA256",
+          "SSLVersion": "TLS1.2"
+        }
+      ],
+      "IncludeInScript": true
+    }
+  ],
+  "WebSocket": {
+    "IncludeInScript": false,
+    "IsScriptIncludeWebSocket": false
+  },
+  "NumberOfCorrelations": 7
+}

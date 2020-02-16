@@ -1,0 +1,13 @@
+[t1]
+SnapshotXmlFile=snapshot_1.xml
+ContentType=text/html
+StepName=Url: www.mail.nic.ru
+Total=1
+FileName1=t1.html
+RequestHeaderFile=t1_RequestHeader.txt
+ResponseHeaderFile=t1_ResponseHeader.txt
+RawStepEndTime=1581804173433
+RawStepName=www.mail.nic.ru
+RequestBodyFile=t1_RequestBody.txt
+RawStepStartTime=1581804173253
+URL1=https://www.mail.nic.ru/

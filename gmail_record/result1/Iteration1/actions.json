@@ -1,0 +1,104 @@
+[
+    {
+        "actionName": "Action",
+        "steps": [
+            {
+                "stepId": "STEP1",
+                "stepName": "Url: www.mail.nic.ru",
+                "infFile": "t1.inf",
+                "time": 1581804173436
+            },
+            {
+                "stepId": "STEP2",
+                "stepName": "Custom Request: json_auth.php",
+                "infFile": "t2.inf",
+                "time": 1581804173477
+            },
+            {
+                "stepId": "STEP3",
+                "stepName": "Custom Request: json_auth.php_2",
+                "infFile": "t3.inf",
+                "time": 1581804173994
+            },
+            {
+                "stepId": "STEP4",
+                "stepName": "Url: roundcubemail",
+                "infFile": "t5.inf",
+                "time": 1581804174177
+            },
+            {
+                "stepId": "STEP5",
+                "stepName": "Url: watermark.html",
+                "infFile": "t6.inf",
+                "time": 1581804174186
+            },
+            {
+                "stepId": "STEP6",
+                "stepName": "Url: roundcubemail_2",
+                "infFile": "t11.inf",
+                "time": 1581804174431
+            },
+            {
+                "stepId": "STEP7",
+                "stepName": "Submit Data: roundcubemail_5",
+                "infFile": "t12.inf",
+                "time": 1581804174683
+            },
+            {
+                "stepId": "STEP8",
+                "stepName": "Url: roundcubemail_6",
+                "infFile": "t13.inf",
+                "time": 1581804174813
+            },
+            {
+                "stepId": "STEP9",
+                "stepName": "Url: roundcubemail_7",
+                "infFile": "t14.inf",
+                "time": 1581804174912
+            },
+            {
+                "stepId": "STEP10",
+                "stepName": "Url: www.mail.nic.ru_2",
+                "infFile": "t15.inf",
+                "time": 1581804174920
+            }
+        ],
+        "transactions": [
+            {
+                "transactionName": "0_homepage",
+                "rawStartTime": 1581804173246,
+                "rawEndTime": 1581804173437,
+                "thinkTime": 0.0,
+                "wastedTime": 0.14182615280151368
+            },
+            {
+                "transactionName": "1_login",
+                "rawStartTime": 1581804173438,
+                "rawEndTime": 1581804174187,
+                "thinkTime": 0.0,
+                "wastedTime": 0.028804302215576173
+            },
+            {
+                "transactionName": "2_message",
+                "rawStartTime": 1581804174188,
+                "rawEndTime": 1581804174432,
+                "thinkTime": 0.0,
+                "wastedTime": 0.013330459594726563
+            },
+            {
+                "transactionName": "3_sent",
+                "rawStartTime": 1581804174433,
+                "rawEndTime": 1581804174813,
+                "thinkTime": 0.0,
+                "wastedTime": 0.010077238082885743
+            },
+            {
+                "transactionName": "4_logout",
+                "rawStartTime": 1581804174814,
+                "rawEndTime": 1581804174921,
+                "thinkTime": 0.0,
+                "wastedTime": 0.008176088333129883
+            }
+        ]
+    }
+]

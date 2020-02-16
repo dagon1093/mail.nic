@@ -1,0 +1,11 @@
+[t8]
+FileName1=t8.txt
+URL1=https://mail.nic.ru/roundcubemail/?_task=mail&_action=refresh
+Total=1
+RequestHeaderFile=t8_RequestHeader.txt
+RequestBodyFile=t8_RequestBody.txt
+ResponseHeaderFile=t8_ResponseHeader.txt
+ContentType=text/plain
+SnapshotXmlFile=snapshot_8.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

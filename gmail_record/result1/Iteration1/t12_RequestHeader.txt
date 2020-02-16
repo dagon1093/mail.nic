@@ -1,0 +1,12 @@
+POST /roundcubemail/?_task=mail&_unlock=loading1581804174434&_lang=ru_RU&_framed=1 HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+Referer: https://mail.nic.ru/roundcubemail/?_task=mail&_action=compose&_id=10168630305e486a911e994
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Accept: */*
+Connection: Keep-Alive
+Host: mail.nic.ru
+Cookie: roundcube_sessid=7inpg8j9c31pasqg46mmleeg07; roundcube_sessauth=Sa3b98df8999d4bdf0db4ec187a3fd25342e66ed2
+Content-Length: 538
+

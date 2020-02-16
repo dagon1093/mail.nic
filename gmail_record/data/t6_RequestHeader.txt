@@ -1,0 +1,14 @@
+GET /roundcubemail/?_task=mail&_mbox=INBOX&_action=compose HTTP/1.1
+Host: mail.nic.ru
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36
+Sec-Fetch-User: ?1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Referer: https://mail.nic.ru/roundcubemail/?_task=mail&_mbox=INBOX
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: _ga=GA1.2.1789073779.1573069310; _gid=GA1.2.1906821879.1573069310; roundcube_sessid=r185t02m6dbfjbee75cmnk8m52; roundcube_sessauth=Sa02997684223da70996ffee767a481ca7d55e245
+

@@ -1,0 +1,13 @@
+[t3]
+SnapshotXmlFile=snapshot_3.xml
+ContentType=application/json
+StepName=Custom Request: json_auth.php_2
+Total=1
+FileName1=t3.json
+RequestHeaderFile=t3_RequestHeader.txt
+ResponseHeaderFile=t3_ResponseHeader.txt
+RawStepEndTime=1581804173991
+RawStepName=json_auth.php_2
+RequestBodyFile=t3_RequestBody.txt
+RawStepStartTime=1581804173478
+URL1=https://mail.nic.ru/proxy/json_auth.php

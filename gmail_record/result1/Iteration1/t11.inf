@@ -1,0 +1,17 @@
+[t11]
+SnapshotXmlFile=snapshot_6.xml
+ContentType=text/html
+StepName=Url: roundcubemail_2
+Total=2
+FileName1=t11.html
+FileName2=t11f0.gif
+RequestHeaderFile=t11_RequestHeader.txt
+UseFrameIndex=1
+ResponseHeaderFile=t11_ResponseHeader.txt
+RawStepEndTime=1581804174428
+FrameIndex2=0.0
+RawStepName=roundcubemail_2
+RequestBodyFile=t11_RequestBody.txt
+RawStepStartTime=1581804174199
+URL1=https://mail.nic.ru/roundcubemail/?_task=mail&_action=compose&_id=10168630305e486a911e994
+URL2=file:

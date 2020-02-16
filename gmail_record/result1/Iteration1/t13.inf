@@ -1,0 +1,17 @@
+[t13]
+SnapshotXmlFile=snapshot_8.xml
+ContentType=text/html
+StepName=Url: roundcubemail_6
+Total=2
+FileName1=t13.html
+FileName2=t13f0.html
+RequestHeaderFile=t13_RequestHeader.txt
+UseFrameIndex=1
+ResponseHeaderFile=t13_ResponseHeader.txt
+RawStepEndTime=1581804174809
+FrameIndex2=0.0
+RawStepName=roundcubemail_6
+RequestBodyFile=t13_RequestBody.txt
+RawStepStartTime=1581804174686
+URL1=https://mail.nic.ru/roundcubemail/?_task=mail&_refresh=1&_mbox=INBOX
+URL2=https://mail.nic.ru/roundcubemail/skins/outlook/watermark.html

@@ -1,0 +1,13 @@
+[t12]
+SnapshotXmlFile=snapshot_7.xml
+ContentType=text/html
+StepName=Submit Data: roundcubemail_5
+Total=1
+FileName1=t12.html
+RequestHeaderFile=t12_RequestHeader.txt
+ResponseHeaderFile=t12_ResponseHeader.txt
+RawStepEndTime=1581804174679
+RawStepName=roundcubemail_5
+RequestBodyFile=t12_RequestBody.txt
+RawStepStartTime=1581804174437
+URL1=https://mail.nic.ru/roundcubemail/?_task=mail&_unlock=loading1581804174434&_lang=ru_RU&_framed=1

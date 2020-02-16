@@ -1,0 +1,13 @@
+[t6]
+SnapshotXmlFile=snapshot_5.xml
+ContentType=text/html
+StepName=Url: watermark.html
+Total=1
+FileName1=t6.html
+RequestHeaderFile=t6_RequestHeader.txt
+ResponseHeaderFile=t6_ResponseHeader.txt
+RawStepEndTime=1581804174182
+RawStepName=watermark.html
+RequestBodyFile=t6_RequestBody.txt
+RawStepStartTime=1581804174178
+URL1=https://mail.nic.ru/roundcubemail/skins/outlook/watermark.html

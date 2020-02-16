@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Авторизация | Почта RU-CENTER</title>
+	<style type="text/css">
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			background-color: #f9f9f9; 
+		}
+
+		.b-mail-form {
+			border-size: border-box;
+			width: 345px;
+			box-shadow: 0px 0px 26px rgba(0, 0, 0, .1);
+			padding: 29px 22px 22px 22px;
+			font-family: verdana;
+			margin: 20px auto;
+			background-color: #fff; 
+		}
+
+		.b-mail-form__title {
+			font-size: 20px;
+			height: 46px;
+			background: url(img/rucenter_logo.png) no-repeat right center;
+			margin-bottom: 10px;
+		}
+
+		.b-mail-form__label_mail, .b-mail-form__label_password, .b-mail-form__label_link {
+			font-size: 16px;
+			line-height: 24px;
+			color: #333333;
+			float: left;
+			margin-bottom: 6px;
+		}
+
+		.b-mail-form__label_link {
+			float: right;
+		}
+
+		.b-mail-form__link {
+			color: #4f7cbb;
+			text-decoration: none;
+		}
+
+		.b-mail-form__link:hover, .b-mail-form__link:active {
+			text-decoration: underline;
+		}
+
+		.b-mail-form__link:hover + .b-mail-form__tooltip {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.b-mail-form__input {
+			width: 100%;
+			margin: 0px;
+			margin-bottom: 16px;
+			border: 1px solid #d9d9d9;
+			font-size: 16px;
+			padding: 6px;
+			color: #333333;
+		}
+
+		.b-mail-form__input--nomargin {
+			margin: 0px;
+		}
+
+		.b-mail-form__long-domain-text {
+			margin-bottom: 16px;
+			font-size: 16px;
+			color: #333333;
+		}
+
+		.b-mail-form__input:focus, .b-mail-form__input:active {
+			border: 1px solid #2c77bc;
+		}
+
+		.b-mail-form__input-error, .b-mail-form__input-error:focus, .b-mail-form__input-error:active {
+			border: 1px solid #e33434;
+		}
+
+		.b-mail-form__submit-block {
+			white-space: nowrap;
+			line-height: 28px;
+			vertical-align: middle;
+		}
+
+		.b-mail-form__submit {
+			width: 96px;
+			height: 34px;
+			font-size: 16px;
+			color: #fff;
+			background-color: #4273b2;
+			border: none;
+			border-radius: 3px;
+			float: left;
+			margin-right: 16px;
+			cursor: pointer;
+		}
+
+		.b-mail-form__submit:hover, .b-mail-form__submit:active {
+			background-color: #3c68a2;
+		}
+
+		.b-mail-form__submit:disabled {
+			background-color: #dbdbdb;
+		}
+
+		.b-mail-form__checkbox-input{
+			display: none;
+		}
+
+		.b-mail-form__checkbox {
+			font-size: 12px;
+			color: #333333;
+			padding-left: 18px;
+			white-space: nowrap;
+			background: url(img/checkbox_unchecked.png) no-repeat left 2px;
+			cursor: pointer;
+		}
+
+		.b-mail-form__checkbox-input:checked + .b-mail-form__checkbox {
+			background: url(img/checkbox_checked.png) no-repeat left 2px;
+		}
+
+		.b-mail-form-clearfix {
+			clear: both;
+		}
+
+
+		.b-mail-form__tooltip{
+			display: inline-block;
+			opacity: 0;
+			visibility: hidden;
+			transition: all .2s linear;
+			position: absolute;
+			margin-top: 32px;
+			margin-left: -80px;
+			color: #666666;
+			font-size: 14px;
+			background-color: #fff;
+			border: 1px solid #dbdbdb;
+			border-radius: 3px;
+			padding: 8px 16px;
+			line-height: 20px;
+			box-shadow: 0px 0px 16px rgba(0, 0, 0, .1);
+		}
+
+		.b-mail-form__tooltip:before {
+			content: '';
+			position: absolute;
+			z-index: 200;
+			top: -8px;
+			width: 14px;
+			height: 8px;
+			background: url(img/tooltip_tail.png) no-repeat left top;
+		}
+
+		.b-mail-form__error-text {
+			font-size: 16px;
+			color: #e33434;
+			margin-bottom: 16px;
+		}
+
+	</style>
+<script type="text/javascript">
+var with_email = false;
+
+var base=36;
+var t_min=1;
+var t_max=26;
+var skew=38;
+var damp=700;
+var initial_bias=72;
+var initial_n=128;
+var delimiter="-";
+var max_int=2147483647;
+var Punycode=function(){};
+Punycode.prototype.chCode=function(str)
+{
+return str.length?str.charCodeAt(0):0
+}
+Punycode.prototype.LastPos=function(a,b)
+{
+var s="",p;
+for(p=0;p<b.length;p++)
+{
+s+=b.charAt(b.length-p);
+}
+p=s.indexOf(a);
+var result=(p>-1)?s.length-p:-1;
+return result;
+}
+Punycode.prototype.return_i=function(i)
+{
+return(i<0)?65536+i:i;
+}
+Punycode.prototype.SimpleConversionAU=function(d)
+{
+var a=0;
+if(d<26)
+{
+a=d+97;
+}else{
+if(d<base){a=d-26+48;}
+}
+return a;
+}
+Punycode.prototype.SimpleConversionUA=function(c)
+{
+var a=base;
+if((c-48)<10)
+{
+a=c-22
+}else{
+if((c-65)<26)
+{
+a=c-65
+}else{
+if((c-97)<26)
+{
+a=c-97
+}
+}
+}
+return a
+}
+Punycode.prototype.biasAdapt=function(delta,numpoints,firsttime)
+{
+var bias;
+var dt=delta,
+k=0;
+if(firsttime)
+{
+dt=parseInt(dt/damp)
+}else{
+dt=parseInt(dt/2)
+}
+dt+=parseInt(dt/numpoints);
+while(dt>parseInt(((base-t_min)*t_max)/2))
+{
+dt=parseInt(dt/(base-t_min));
+k+=base;
+}
+bias=k+parseInt(((base-t_min+1)*dt)/(dt+skew));
+return(bias);
+}
+Punycode.prototype.isLessThen=function(character,n)
+{
+return(this.return_i(this.chCode(character))<n)
+}
+Punycode.prototype.toUnicode=function(n,to_enc)
+{
+var res=max_int;
+for(var t=0;t<to_enc.length;t++)
+{
+var a=to_enc.charCodeAt(t);
+if((a>=n)&&(a<res))res=a
+}
+return res
+}
+Punycode.prototype.Encode=function(to_encode)
+{
+var to_enc=to_encode,
+$O="";
+try
+{
+var n=initial_n,init_bias=initial_bias,b=0,c;
+for(var l=0;l<to_enc.length;l++)
+{
+c=to_enc.charAt(l);
+if(this.isLessThen(c,initial_n))
+{
+$O+=c;b++
+}
+}
+if($O.length<to_enc.length)
+{
+if($O.length>0)
+{
+$O+=delimiter
+}
+}
+var h=b,_1e=0;
+while(h<to_enc.length)
+{
+var m=this.toUnicode(n,to_enc);
+_1e+=this.return_i(m-n)*(h+1);
+n=m;
+for(var l=0;l<to_enc.length;l++)
+{
+c=to_enc.charAt(l);
+if(this.isLessThen(c,n))
+{
+_1e++
+}else{
+if(this.return_i(this.chCode(c))==n)
+{
+var q=_1e;
+k=base;
+while(k<=max_int)
+{
+if(k<=(init_bias+t_min))
+{
+t=t_min
+}else{
+if(k>=(init_bias+t_max))
+{
+t=t_max
+}else{
+t=k-init_bias
+}
+}
+if(q<t)break;
+$O+=String.fromCharCode(this.SimpleConversionAU(t+((q-t)%(base-t))));
+q=parseInt((q-t)/(base-t));
+k+=base
+}
+$O+=String.fromCharCode(this.SimpleConversionAU(q));
+first=false;
+if(h==b)
+{
+first=true;
+}
+init_bias=this.biasAdapt(_1e,h+1,first);
+_1e=0;
+h++
+}
+}
+}
+_1e++;n++
+}
+}
+catch(e)
+{
+$O=to_encode
+}
+return $O.toLowerCase()
+}
+Punycode.prototype.Decode=function(to_decode)
+{
+var to_dec=to_decode,
+$O="";
+try
+{
+var n=initial_n,init_bias=initial_bias,i=0,c,ps=this.LastPos(delimiter,to_dec);
+if(ps>-1)
+{
+for(var l=0;l<ps;l++)
+{
+c=to_dec.charAt(l);
+if(this.isLessThen(c,initial_n))
+{
+$O+=c
+}else{
+return""
+}
+}
+}
+ps++;
+while(ps<to_dec.length)
+{
+var _2a=i,w=1,k=base;
+while((k<=max_int)&&(ps<to_dec.length))
+{
+c=to_dec.charAt(ps);
+ps++,_2b=this.SimpleConversionUA(this.chCode(c));
+if((_2b>=base)||(_2b>parseInt((max_int-i)/w)))
+{
+return""
+}
+i+=_2b*w;
+if(k<=init_bias)
+{
+t=t_min
+}else{
+if(k>=(init_bias+t_max))
+{
+t=t_max
+}else{
+t=k-init_bias
+}
+}
+if(_2b<t)
+{
+break;
+}
+if(w>parseInt(max_int/(base-t)))
+{
+return""
+}
+w*=(base-t);
+k+=base
+}
+var _2c=(_2a==0);
+init_bias=this.biasAdapt(i-_2a,$O.length+1,_2c);
+if(parseInt(i/$O.length+1)>(max_int-n))
+{
+return"";
+}
+n+=parseInt(i/($O.length+1));
+i%=($O.length+1);
+if(this.isLessThen(String.fromCharCode(n),initial_n))
+{
+return"";
+}
+$O=$O.substr(0,i)+String.fromCharCode(n)+$O.substr(i);
+i++
+}
+}
+catch(e)
+{
+$O=to_decode
+}
+return $O
+}
+Punycode.prototype.EncodeDomain=function(domain_to_punycode)
+{
+domain_to_punycode=domain_to_punycode.toLowerCase();
+domain_to_punycode=domain_to_punycode.replace("@","");
+var c=domain_to_punycode.split(".");
+for(var i=0;i<c.length;i++)
+{
+if(/[^\x00-\x7f]+/.test(c[i]))
+{
+c[i]="xn--"+Punycode.prototype.Encode(c[i])
+}
+}
+c=c.join(".");
+return "@"+c;
+}
+Punycode.prototype.DecodeDomain=function(domain_to_decode)
+{
+domain_to_decode=domain_to_decode.replace("@","");
+var c=domain_to_decode.split(".");
+for(var i=0;i<c.length;i++)
+{
+  //для перекодирования письма подтверждения о доставке, строки вида "xn--d1acufc.xn--p1ai; CommuniGate Pro v.5.2.19"
+  if (c[i].match(';')){
+    c[i]=c[i].split(';');
+    c[i]=c[i][0];
+  }
+try
+{
+if(/^xn--/.test(c[i]))
+{
+c[i]=Punycode.prototype.Decode(c[i].replace("xn--",""));
+}
+}
+catch(e)
+{
+return
+}
+}
+c=c.join(".");
+return "@"+c;
+}
+Punycode.prototype.GetTail=function(imail)
+{
+if(imail)
+{
+var iline=imail.replace(/\@([^\s\,\>]+)/g,this.EncodeDomain);
+return iline;
+}else{
+return imail;
+}
+}
+Punycode.prototype.GetTailDecode=function(fmail)
+{
+if(fmail)
+{
+var iline=fmail.replace(/\@([A-Za-z0-9\.\-]+)/g,this.DecodeDomain);
+return iline;
+}else{
+return fmail;
+}
+}
+function ReplaceValue()
+{
+var ua=navigator.userAgent;
+var IEoffset=ua.indexOf("MSIE ");
+var MSIEVersionNumber=parseFloat(ua.substring(IEoffset+5,ua.indexOf(";",IEoffset)));
+if(MSIEVersionNumber<6){}
+else{
+punycode=new Punycode();
+var elogin=document.getElementById('elogin');
+elogin.value = punycode.GetTail(elogin.value);
+}
+return true;
+}
+</script>
+</head>
+<body>	
+<script type='text/javascript'>
+if (((window.location.host == 'mail.nic.ru') | (window.location.host == 'nicmail.ru') | (window.location.host == 'www.nicmail.ru')) & ('' == '')){
+    window.location.href=window.location.protocol+'//www.mail.nic.ru/'
+}
+</script>
+	<div class="b-mail-form">
+		<div class="b-mail-form__title">Вход в почту</div>
+		<form method="POST" name="login" id="email_form" action="/proxy/make_auth.php"  onSubmit="ReplaceValue();">
+			<label class="b-mail-form__label_mail" for="elogin">Адрес почты</label>
+			<input type="text" id="elogin" name="username" class="b-mail-form__input" />
+			<label class="b-mail-form__label_password" for="password_field">Пароль</label>
+			<label class="b-mail-form__label_link" for="password_field"><a class="b-mail-form__link" href="#">Забыли?</a><div class="b-mail-form__tooltip">Если вы забыли пароль, обратитесь<br>к администратору Вашего почтового<br>домена</div></label>
+			<input type="password" id="password_field" name="password" class="b-mail-form__input" />
+			<div class="b-mail-form__submit-block">
+				<input type="submit" value="Войти" class="b-mail-form__submit">
+			</div>
+			<div class="b-mail-form-clearfix"></div>
+		</form>
+	</div>
+</body>
+</html>

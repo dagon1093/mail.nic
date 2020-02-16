@@ -1,0 +1,15 @@
+[t10]
+FileName1=t10.htm
+URL1=https://mail.nic.ru/roundcubemail/?_task=mail&_refresh=1&_mbox=INBOX
+Total=3
+RequestHeaderFile=t10_RequestHeader.txt
+RequestBodyFile=NONE
+ResponseHeaderFile=t10_ResponseHeader.txt
+ContentType=text/html
+SnapshotXmlFile=snapshot_10.xml
+FileName2=t10.txt
+URL2=https://mail.nic.ru/roundcubemail/?_task=mail&_remote=1&_unlock=0&_action=getunread&_=1573069503297
+FileName3=t10.txt
+URL3=https://mail.nic.ru/roundcubemail/?_task=mail&_refresh=1&_mbox=INBOX&_remote=1&_unlock=loading1573069503444&_action=list&_=1573069503296
+[ProtocolInfo]
+ProtocolId=QTWeb

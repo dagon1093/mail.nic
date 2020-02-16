@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title>Roundcube Webmail :: Написать сообщение</title>
+<meta name="viewport" content="" id="viewport" />
+<link rel="shortcut icon" href="skins/larry/images/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="skins/larry/styles.min.css?s=1493368165" />
+<link rel="stylesheet" type="text/css" href="skins/larry/mail.min.css?s=1493368165" />
+<!--[if IE 9]><link rel="stylesheet" type="text/css" href="skins/larry/svggradients.min.css?s=1493368165" /><![endif]-->
+<link rel="stylesheet" type="text/css" href="plugins/rcs_skins/styles.css?s=1461156894">
+<link rel="stylesheet" type="text/css" href="plugins/jqueryui/themes/larry/jquery-ui-1.10.4.custom.css?s=1493368164">
+<link rel="stylesheet" type="text/css" href="program/js/tinymce/roundcube/browser.css?s=1493368164">
+<script type="text/javascript" src="skins/larry/ui.min.js?s=1493368165"></script>
+
+<link rel="stylesheet" type="text/css" href="skins/outlook/common/common.css?s=1461156894" />
+<script type="text/javascript" src="skins/outlook/common/common.min.js?s=1461156894"></script>
+
+    <link rel="stylesheet" type="text/css" href="skins/outlook/common/desktop.css?s=1461156894" />
+
+
+<script type='text/javascript' src='skins/outlook/skin/colors.min.js?s=1461156894'></script>
+
+    <link rel="stylesheet" type="text/css" href="skins/outlook/common/st_buttons_desktop.css?s=1461156894" />
+    <link rel="stylesheet" type="text/css" href="skins/outlook/common/st_menus_desktop.css?s=1461156894" />
+    <link rel="stylesheet" type="text/css" href="skins/outlook/common/ic_fa_desktop.css?s=1461156894" />
+    <link rel="stylesheet" type="text/css" href="skins/outlook/common/remove_list_icons.css?s=1461156894" />
+    <link rel="stylesheet" type="text/css" href="skins/outlook/skin/skin_desktop.css?s=1461156894" />
+
+
+<link rel="stylesheet" type="text/css" href="skins/larry/googiespell.min.css?s=1493368165" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<script src="program/js/jquery.min.js?s=1493368164" type="text/javascript"></script>
+<script src="program/js/common.min.js?s=1493368164" type="text/javascript"></script>
+<script src="program/js/app.min.js?s=1493368164" type="text/javascript"></script>
+<script src="program/js/list.min.js?s=1493368164" type="text/javascript"></script>
+<script src="program/js/tinymce/tinymce.min.js?s=1493368164" type="text/javascript"></script>
+<script src="program/js/editor.min.js?s=1493368164" type="text/javascript"></script>
+<script src="program/js/googiespell.min.js?s=1493368164" type="text/javascript"></script>
+<script type="text/javascript">
+
+/*
+        @licstart  The following is the entire license notice for the 
+        JavaScript code in this page.
+
+        Copyright (C) 2005-2014 The Roundcube Dev Team
+
+        The JavaScript code in this page is free software: you can redistribute
+        it and/or modify it under the terms of the GNU General Public License
+        as published by the Free Software Foundation, either version 3 of
+        the License, or (at your option) any later version.
+
+        The code is distributed WITHOUT ANY WARRANTY; without even the implied
+        warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+        See the GNU GPL for more details.
+
+        @licend  The above is the entire license notice
+        for the JavaScript code in this page.
+*/
+var rcmail = new rcube_webmail();
+rcmail.set_env({"task":"mail","x_frame_options":"sameorigin","standard_windows":false,"locale":"ru_RU","cookie_domain":"","cookie_path":"\/","cookie_secure":false,"skin":"larry","refresh_interval":60,"session_lifetime":7200,"action":"compose","comm_path":".\/?_task=mail","user_id":"fc0d73eaa6da15288517433ae84db0a2","compose_extwin":false,"date_format":"yy-mm-dd","rcs_phone":false,"rcs_tablet":false,"rcs_mobile":false,"rcs_desktop":true,"rcs_device":"desktop","rcs_color":false,"rcs_skin":"outlook","rcs_skin_type":"desktop","rcs_login_branding":null,"rcs_frame_branding":null,"compose_id":"10168630305e486a911e994","session_id":"7inpg8j9c31pasqg46mmleeg07","mailbox":"INBOX","top_posting":false,"sig_below":false,"recipients_separator":",","save_localstorage":true,"is_sent":false,"drafts_mailbox":"Drafts","draft_autosave":300,"default_font":"Verdana,Geneva,sans-serif","default_font_size":"10pt","show_sig":true,"pagecount":0,"current_page":0,"signatures":[],"identities":[],"autocomplete_max":15,"autocomplete_min_length":1,"composebody":"composebody","editor_config":{"mode":"","lang":"ru","skin_path":"skins\/larry","spellcheck":1,"spelldict":0},"spell_langs":{"en_CA":"English (Canada)","en_GB":"English (GB)","en_US":"English (US)","ru_RU":"Russian (\u0420\u0443\u0441\u0441\u043a\u0438\u0439)"},"spell_lang":"ru_RU","spellcheck_langs":"English (Canada)=en_CA,English (GB)=en_GB,English (US)=en_US,+Russian (\u0420\u0443\u0441\u0441\u043a\u0438\u0439)=ru_RU","attachments":[],"filedrop":{"action":"upload","fieldname":"_attachments"},"max_filesize":31457280,"filesizeerror":"\u0417\u0430\u0433\u0440\u0443\u0436\u0435\u043d\u043d\u044b\u0439 \u0444\u0430\u0439\u043b \u0431\u043e\u043b\u044c\u0448\u0435 \u043c\u0430\u043a\u0441\u0438\u043c\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u0440\u0430\u0437\u043c\u0435\u0440\u0430 \u0432 30 \u041c\u0411.","textresponses":[],"request_token":"99bd1d7986a134c2aaf05c0d66ee4104"});
+rcmail.add_label({"loading":"\u0417\u0430\u0433\u0440\u0443\u0437\u043a\u0430...","servererror":"\u041e\u0448\u0438\u0431\u043a\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430!","connerror":"\u041e\u0448\u0438\u0431\u043a\u0430 \u0441\u043e\u0435\u0434\u0438\u043d\u0435\u043d\u0438\u044f (\u0421\u0431\u043e\u0439 \u043f\u043e\u0434\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f \u043a \u0441\u0435\u0440\u0432\u0435\u0440\u0443)!","requesttimedout":"\u041f\u0440\u0435\u0432\u044b\u0448\u0435\u043d\u043e \u0432\u0440\u0435\u043c\u044f \u043e\u0436\u0438\u0434\u0430\u043d\u0438\u044f \u0437\u0430\u043f\u0440\u043e\u0441\u0430","refreshing":"\u041e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435...","windowopenerror":"\u0412\u0441\u043f\u043b\u044b\u0432\u0430\u044e\u0449\u0435\u0435 \u043e\u043a\u043d\u043e \u0431\u044b\u043b\u043e \u0437\u0430\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u043d\u043e!","uploadingmany":"\u0417\u0430\u0433\u0440\u0443\u0437\u043a\u0430 \u0444\u0430\u0439\u043b\u043e\u0432...","nosubject":"(\u0431\u0435\u0437 \u0442\u0435\u043c\u044b)","nosenderwarning":"\u041f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430, \u0432\u0432\u0435\u0434\u0438\u0442\u0435 \u0430\u0434\u0440\u0435\u0441 \u044d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u043d\u043e\u0439 \u043f\u043e\u0447\u0442\u044b \u043e\u0442\u043f\u0440\u0430\u0432\u0438\u0442\u0435\u043b\u044f.","norecipientwarning":"\u041f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430, \u0432\u0432\u0435\u0434\u0438\u0442\u0435 \u0445\u043e\u0442\u044f \u0431\u044b \u043e\u0434\u043d\u043e\u0433\u043e \u043f\u043e\u043b\u0443\u0447\u0430\u0442\u0435\u043b\u044f.","nosubjectwarning":"\u041f\u043e\u043b\u0435 \u0422\u0435\u043c\u0430 \u043d\u0435 \u0437\u0430\u043f\u043e\u043b\u043d\u0435\u043d\u043e. \u0425\u043e\u0442\u0438\u0442\u0435 \u0437\u0430\u043f\u043e\u043b\u043d\u0438\u0442\u044c \u0435\u0433\u043e \u0441\u0435\u0439\u0447\u0430\u0441?","cancel":"\u041e\u0442\u043c\u0435\u043d\u0430","nobodywarning":"\u041e\u0442\u043f\u0440\u0430\u0432\u0438\u0442\u044c \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435 \u0431\u0435\u0437 \u0442\u0435\u043a\u0441\u0442\u0430?","notsentwarning":"\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435 \u043d\u0435 \u0431\u044b\u043b\u043e \u043e\u0442\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u043e. \u0412\u044b \u0445\u043e\u0442\u0438\u0442\u0435 \u043e\u0442\u043a\u0430\u0437\u0430\u0442\u044c\u0441\u044f \u043e\u0442 \u043e\u0442\u043f\u0440\u0430\u0432\u043a\u0438?","notuploadedwarning":"\u0412\u043b\u043e\u0436\u0435\u043d\u0438\u044f \u0437\u0430\u0433\u0440\u0443\u0436\u0435\u043d\u044b \u043d\u0435 \u043f\u043e\u043b\u043d\u043e\u0441\u0442\u044c\u044e. \u041f\u043e\u0434\u043e\u0436\u0434\u0438\u0442\u0435 \u0438\u043b\u0438 \u043e\u0442\u043c\u0435\u043d\u0438\u0442\u0435 \u0437\u0430\u0433\u0440\u0443\u0437\u043a\u0443.","savingmessage":"\u0421\u043e\u0445\u0440\u0430\u043d\u0435\u043d\u0438\u0435 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u044f...","sendingmessage":"\u041e\u0442\u043f\u0440\u0430\u0432\u043a\u0430 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u044f...","messagesaved":"\u0421\u043e\u0445\u0440\u0430\u043d\u0435\u043d\u043e \u0432 \u0427\u0435\u0440\u043d\u043e\u0432\u0438\u043a\u0430\u0445.","converting":"\u0423\u0434\u0430\u043b\u0435\u043d\u0438\u0435 \u0444\u043e\u0440\u043c\u0430\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u044f...","editorwarning":"\u041f\u0435\u0440\u0435\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u0435 \u0442\u0438\u043f\u0430 \u0440\u0435\u0434\u0430\u043a\u0442\u043e\u0440\u0430 \u043c\u043e\u0436\u0435\u0442 \u043f\u0440\u0438\u0432\u0435\u0441\u0442\u0438 \u043a \u043f\u043e\u0442\u0435\u0440\u0435  \u0444\u043e\u0440\u043c\u0430\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f \u0442\u0435\u043a\u0441\u0442\u0430. \u041f\u0440\u043e\u0434\u043e\u043b\u0436\u0438\u0442\u044c?","searching":"\u041f\u043e\u0438\u0441\u043a...","uploading":"\u0424\u0430\u0439\u043b \u0437\u0430\u0433\u0440\u0443\u0436\u0430\u0435\u0442\u0441\u044f\u2026","fileuploaderror":"\u041e\u0448\u0438\u0431\u043a\u0430 \u0437\u0430\u0433\u0440\u0443\u0437\u043a\u0438 \u0444\u0430\u0439\u043b\u0430.","sendmessage":"\u041e\u0442\u043f\u0440\u0430\u0432\u0438\u0442\u044c \u0441\u0435\u0439\u0447\u0430\u0441","newresponse":"\u0421\u043e\u0437\u0434\u0430\u0442\u044c \u043d\u043e\u0432\u044b\u0439 \u043e\u0442\u0432\u0435\u0442","responsename":"\u041d\u0430\u0437\u0432\u0430\u043d\u0438\u0435","responsetext":"\u0422\u0435\u043a\u0441\u0442\u0430 \u043e\u0442\u0432\u0435\u0442\u0430","save":"\u0421\u043e\u0445\u0440\u0430\u043d\u0438\u0442\u044c","savingresponse":"\u0421\u043e\u0445\u0440\u0430\u043d\u0435\u043d\u0438\u0435 \u0442\u0435\u043a\u0441\u0442\u0430 \u043e\u0442\u0432\u0435\u0442\u0430...","restoresavedcomposedata":"\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0440\u0430\u043d\u0435\u0435 \u0441\u043e\u0441\u0442\u0430\u0432\u043b\u0435\u043d\u043d\u043e\u0435, \u043d\u043e \u043d\u0435\u043e\u0442\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u043d\u043e\u0435 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435.\n\n\u0422\u0435\u043c\u0430: $subject\n\u0421\u043e\u0445\u0440\u0430\u043d\u0435\u043d\u043e: $date\n\n\u0425\u043e\u0442\u0438\u0442\u0435 \u0432\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c \u044d\u0442\u043e \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435?","restoremessage":"\u0412\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435?","delete":"\u0423\u0434\u0430\u043b\u0438\u0442\u044c","restore":"\u0412\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u044c","ignore":"\u041f\u0440\u043e\u043f\u0443\u0441\u0442\u0438\u0442\u044c","selectimportfile":"\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0444\u0430\u0439\u043b \u0434\u043b\u044f \u0437\u0430\u0433\u0440\u0443\u0437\u043a\u0438.","messageissent":"\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435 \u0443\u0436\u0435 \u043e\u0442\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u043e, \u043d\u043e \u0435\u0449\u0435 \u043d\u0435 \u0441\u043e\u0445\u0440\u0430\u043d\u0435\u043d\u043e. \u0412\u044b \u0445\u043e\u0442\u0438\u0442\u0435 \u0441\u043e\u0445\u0440\u0430\u043d\u0438\u0442\u044c \u0435\u0433\u043e?","autocompletechars":"\u0412\u0432\u0435\u0434\u0438\u0442\u0435, \u043a\u0430\u043a \u043c\u0438\u043d\u0438\u043c\u0443\u043c, $min \u0441\u0438\u043c\u0432\u043e\u043b\u043e\u0432 \u0434\u043b\u044f \u0430\u0432\u0442\u043e\u0434\u043e\u043f\u043e\u043b\u043d\u0435\u043d\u0438\u044f.","autocompletemore":"\u041f\u043e\u0438\u0441\u043a \u0432\u043e\u0437\u0432\u0440\u0430\u0442\u0438\u043b \u0441\u043b\u0438\u0448\u043a\u043e\u043c \u043c\u043d\u043e\u0433\u043e \u0440\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u043e\u0432. \u041f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430, \u0443\u0442\u043e\u0447\u043d\u0438\u0442\u0435.","selectimage":"\u0412\u044b\u0431\u0440\u0430\u0442\u044c \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435","addimage":"\u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c \u0438\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435","selectmedia":"\u0412\u044b\u0431\u0440\u0430\u0442\u044c \u0432\u0438\u0434\u0435\u043e","addmedia":"\u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c \u0432\u0438\u0434\u0435\u043e","checking":"\u041f\u0440\u043e\u0432\u0435\u0440\u043a\u0430..."});
+rcmail.gui_container("topline-left","topline-left");
+rcmail.gui_container("topline-center","topline-center");
+rcmail.gui_container("topline-right","topline-right");
+rcmail.gui_container("taskbar","taskbar");
+rcmail.gui_container("toolbar","compose-toolbar");
+rcmail.gui_container("composeoptions","composeoptions");
+rcmail.register_button('logout', 'rcmbtn101', 'link', '', '', '');
+rcmail.register_button('mail', 'rcmbtn102', 'link', '', 'button-mail button-selected', '');
+rcmail.register_button('addressbook', 'rcmbtn103', 'link', '', 'button-addressbook button-selected', '');
+rcmail.register_button('settings', 'rcmbtn104', 'link', '', 'button-settings button-selected', '');
+rcmail.register_button('logout', 'rcmbtn105', 'link', '', 'button-logout', '');
+rcmail.register_button('list', 'rcmbtn106', 'link', 'button back', '', '');
+rcmail.register_button('send', 'rcmbtn107', 'link', 'button send', '', '');
+rcmail.register_button('savedraft', 'rcmbtn108', 'link', 'button savedraft', '', '');
+rcmail.register_button('spellcheck', 'rcmbtn109', 'link', 'button spellcheck', 'button spellcheck pressed', '');
+rcmail.register_button('insert-sig', 'rcmbtn111', 'link', 'button insertsig', '', '');
+rcmail.gui_object('qsearchbox', 'contactsearchbox');
+rcmail.register_button('reset-search', 'rcmbtn112', 'link', '', '', '');
+rcmail.gui_object('addressbookslist', 'directorylist');
+rcmail.gui_object('contactslist', 'contacts-table');
+rcmail.register_button('add-recipient', 'rcmbtn113', 'link', 'listbutton addto', '', '');
+rcmail.register_button('add-recipient', 'rcmbtn114', 'link', 'listbutton addcc', '', '');
+rcmail.register_button('add-recipient', 'rcmbtn115', 'link', 'listbutton addbcc', '', '');
+rcmail.register_button('firstpage', 'rcmbtn116', 'link', 'icon firstpage', '', '');
+rcmail.register_button('previouspage', 'rcmbtn117', 'link', 'icon prevpage', '', '');
+rcmail.register_button('nextpage', 'rcmbtn118', 'link', 'icon nextpage', '', '');
+rcmail.register_button('lastpage', 'rcmbtn119', 'link', 'icon lastpage', '', '');
+rcmail.gui_object('messageform', 'form');
+rcmail.register_button('extwin', 'rcmbtn120', 'link', '', 'button extwin pressed', '');
+rcmail.gui_object('attachmentlist', 'attachment-list');
+rcmail.gui_object('filedrop', 'compose-attachments');
+rcmail.register_button('send', 'rcmbtn122', 'input', '', '', '');
+rcmail.register_button('savedraft', 'rcmbtn123', 'input', '', '', '');
+rcmail.register_button('list', 'rcmbtn124', 'input', '', '', '');
+rcmail.gui_object('uploadform', 'uploadformFrm');
+rcmail.register_button('send-attachment', 'rcmbtn125', 'input', '', '', '');
+rcmail.gui_object('responseslist', 'responseslist');
+rcmail.register_button('save-response', 'rcmbtn127', 'link', 'active', '', '');
+rcmail.register_button('responses', 'rcmbtn128', 'link', 'active', '', '');
+rcmail.gui_object('message', 'messagestack');
+</script>
+
+<script type="text/javascript" src="plugins/rcs_skins/scripts.js?s=1461156894"></script>
+<script type="text/javascript" src="plugins/jqueryui/js/jquery-ui-1.10.4.custom.min.js?s=1493368164"></script>
+<script type="text/javascript" src="plugins/jqueryui/js/i18n/jquery.ui.datepicker-ru.js?s=1493368164"></script>
+</head>
+<body>
+<div id="header">
+<div id="topline" role="banner" aria-labelledby="aria-label-topnav">
+	<h2 id="aria-label-topnav" class="voice">Управление окном</h2>
+	<div class="topleft">
+		
+		<a class="about-link" onclick="UI.show_about(this);return false" id="rcmbtn100" role="button" href="#">О программе</a>
+				<a href="https://www.nic.ru/about/contact_ncc.html" target="_blank" class="support-link" id="supportlink">Поддержка</a>
+			</div>
+	
+	<div class="topright">
+	
+			<span class="username">lt_test@q-expert.com</span>
+		<a class="button-logout" id="rcmbtn101" role="button" href="./?_task=logout" onclick="return rcmail.command('switch-task','logout',this,event)">Выход</a>
+	
+	</div>
+</div>
+
+<div id="topnav">
+	<h2 id="aria-label-tasknav" class="voice">Задачи приложения</h2>
+	<div id="taskbar" class="topright" role="navigation" aria-labelledby="aria-label-tasknav">
+		<a class="button-mail" id="rcmbtn102" role="button" href="./?_task=mail" onclick="return rcmail.command('switch-task','mail',this,event)"><span class="button-inner">Почта</span></a>
+		<a class="button-addressbook" id="rcmbtn103" role="button" href="./?_task=addressbook" onclick="return rcmail.command('switch-task','addressbook',this,event)"><span class="button-inner">Контакты</span></a>
+		
+		<a class="button-settings" id="rcmbtn104" role="button" href="./?_task=settings" onclick="return rcmail.command('switch-task','settings',this,event)"><span class="button-inner">Настройки</span></a>
+		<a class="button-logout" id="rcmbtn105" role="button" href="./?_task=logout" onclick="return rcmail.command('switch-task','logout',this,event)"><span class="button-inner">Выход</span></a>
+		<span class="minmodetoggle" role="presentation"></span>
+	</div>
+	<img src="skins/larry/images/roundcube_logo.png" id="toplogo" alt="Logo" onclick="if(window.rcmail)rcmail.command('switch-task','mail')">
+</div>
+
+<br style="clear:both" />
+</div>
+
+
+
+    <div style='display:none'>
+        <img src="skins/outlook/skin/images/logo.png" id="rcs-logo" alt="Logo" onclick="if(window.rcmail)rcmail.command('switch-task','mail')">
+    </div>
+
+
+
+
+
+<div id="mainscreen">
+
+<h1 class="voice">Roundcube Webmail :: Написать сообщение</h1>
+
+<!-- toolbar -->
+<h2 id="aria-label-toolbar" class="voice">Панель инструментов приложения</h2>
+<div id="messagetoolbar" class="toolbar fullwidth" role="toolbar" aria-labelledby="aria-label-toolbar">
+	<a class="button back disabled" tabindex="-1" id="rcmbtn106" role="button" data-tabindex="2" aria-disabled="true" href="./?_task=mail&amp;_action=list" onclick="return rcmail.command('list','',this,event)">Отмена</a>
+	
+	<span class="spacer"></span>
+	<a class="button send disabled" title="Отправить сейчас" tabindex="-1" id="rcmbtn107" role="button" data-tabindex="2" aria-disabled="true" href="#" onclick="return rcmail.command('send','',this,event)">Отправить</a>
+	<a class="button savedraft disabled" title="Сохранить черновик" tabindex="-1" id="rcmbtn108" role="button" data-tabindex="2" aria-disabled="true" href="#" onclick="return rcmail.command('savedraft','',this,event)">Сохранить</a>
+	<span class="spacer"></span>
+		<span class="dropbutton">
+		<a class="button spellcheck disabled" title="Проверить орфографию" tabindex="-1" id="rcmbtn109" role="button" data-tabindex="2" aria-disabled="true" href="#" onclick="return rcmail.command('spellcheck','',this,event)">Орфография</a>
+		<a href="#languages" class="dropbuttontip" id="spellmenulink" onclick="UI.toggle_popup('spellmenu',event);return false" aria-haspopup="true" aria-expanded="false" tabindex="2">Select Spell Language</a>
+	</span>
+		<a class="button attach" title="Добавить вложение" onclick="UI.show_uploadform(event);return false" aria-haspopup="true" aria-expanded="false" tabindex="2" id="rcmbtn110" role="button" href="#">Вложить</a>
+	<a class="button insertsig disabled" title="Вставить подпись" tabindex="-1" id="rcmbtn111" role="button" data-tabindex="2" aria-disabled="true" href="#" onclick="return rcmail.command('insert-sig','',this,event)">Подпись</a>
+	<a href="#responses" class="button responses" label="responses" title="Вставить ответ" id="responsesmenulink" unselectable="on" onmousedown="return false" onclick="UI.toggle_popup('responsesmenu',event);return false" tabindex="2" aria-haspopup="true" aria-expanded="false" aria-owns="textresponsesmenu">Ответы</a>
+	
+</div>
+
+<div id="mainscreencontent">
+
+<div id="composeview-left">
+
+<!-- inline address book -->
+<div id="compose-contacts" class="uibox listbox" role="region" aria-labelledby="aria-label-composecontacts">
+<h2 id="aria-label-composecontacts" class="boxtitle">Контакты</h2>
+	<div class="listsearchbox" role="search" aria-labelledby="aria-label-composequicksearch">
+		<h3 id="aria-label-composequicksearch" class="voice">Форма поиска контактов</h3>
+		<div class="searchbox">
+			<label for="contactsearchbox" class="voice">Ввод поискового запроса контакта</label>
+			<form name="rcmqsearchform" onsubmit="rcmail.command('search'); return false" style="display:inline" action="./?_task=mail" method="get"><input name="_q" id="contactsearchbox" type="text"></form>
+
+			<a id="searchmenulink" class="iconbutton searchicon"> </a>
+			<a class="iconbutton reset" title="Сброс" id="rcmbtn112" role="button" href="#" onclick="return rcmail.command('reset-search','',this,event)"> </a>
+		</div>
+	</div>
+	<ul id="directorylist" class="treelist listing"><li id="rcmliMA" class="addressbook"><a href="#list" rel="0" onclick="return rcmail.command('list-adresses','0',this)">Персональные адреса</a></li>
+</ul>
+
+	<div class="scroller withfooter" tabindex="-1">
+		<table id="contacts-table" class="listing iconized" role="listbox"><tbody></tbody></table>
+
+	</div>
+<div class="boxfooter">
+	<a title="Кому" class="listbutton addto disabled" id="rcmbtn113" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('add-recipient','to',this,event)"><span class="inner">To+</span></a><a title="Копия" class="listbutton addcc disabled" id="rcmbtn114" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('add-recipient','cc',this,event)"><span class="inner">Cc+</span></a><a title="Скрытая" class="listbutton addbcc disabled" id="rcmbtn115" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('add-recipient','bcc',this,event)"><span class="inner">Bcc+</span></a>
+</div>
+<div class="boxpagenav">
+	<a class="icon firstpage disabled" title="Показать первую страницу" id="rcmbtn116" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('firstpage','',this,event)">Первое</a>
+	<a class="icon prevpage disabled" title="Показать предыдущую страницу" id="rcmbtn117" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('previouspage','',this,event)">Предыдущее</a>
+	<a class="icon nextpage disabled" title="Показать следующую страницу" id="rcmbtn118" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('nextpage','',this,event)">Следующее</a>
+	<a class="icon lastpage disabled" title="Показать последнюю страницу" id="rcmbtn119" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('lastpage','',this,event)">Последнее</a>
+</div>
+</div>
+
+</div>
+
+<div id="composeview-right" role="main">
+
+<form name="form" method="post" id="compose-content" class="uibox" action="./?_task=mail">
+<input type="hidden" name="_token" value="99bd1d7986a134c2aaf05c0d66ee4104">
+
+<!-- message headers -->
+<div id="composeheaders" role="region" aria-labelledby="aria-label-composeheaders">
+<h2 id="aria-label-composeheaders" class="voice">Заголовки сообщений</h2>
+
+<a href="#options" id="composeoptionstoggle" class="moreheaderstoggle" title="Параметры создания" aria-expanded="false"><span class="iconlink"></span></a>
+
+<table class="headers-table compose-headers">
+<tbody>
+	<tr>
+		<td class="title"><label for="_from">От</label></td>
+		<td class="editfield">
+			<input type="hidden" name="_task" value="mail"><input type="hidden" name="_action" value="send"><input type="hidden" name="_id" value="10168630305e486a911e994"><input type="hidden" name="_attachments"><select name="_from" id="_from" tabindex="1" onchange="rcmail.change_identity(this)">
+<option value="5936460" selected="selected">lt_test@q-expert.com</option>
+</select>
+
+			<a href="#identities" onclick="return rcmail.command('identities')" class="iconlink edit" tabindex="0">Изменить данные</a>
+		</td>
+	</tr><tr>
+		<td class="title top"><label for="_to">Кому</label></td>
+		<td class="editfield"><textarea name="_to" spellcheck="false" id="_to" cols="70" rows="1" tabindex="1"></textarea></td>
+	</tr><tr id="compose-cc">
+		<td class="title top">
+			<label for="_cc">Копия</label>
+			<a href="#cc" onclick="return UI.hide_header_row('cc');" class="iconbutton cancel" title="Удалить" tabindex="3">Удалить Копия</a>
+		</td>
+		<td class="editfield"><textarea name="_cc" spellcheck="false" id="_cc" cols="70" rows="1" tabindex="1"></textarea></td>
+	</tr><tr id="compose-bcc">
+		<td class="title top">
+			<label for="_bcc">Скрытая</label>
+			<a href="#bcc" onclick="return UI.hide_header_row('bcc');" class="iconbutton cancel" title="Удалить" tabindex="3">Удалить Скрытая</a>
+		</td>
+		<td class="editfield"><textarea name="_bcc" spellcheck="false" id="_bcc" cols="70" rows="1" tabindex="1"></textarea></td>
+	</tr><tr id="compose-replyto">
+		<td class="title top">
+			<label for="_replyto">Ответить</label>
+			<a href="#replyto" onclick="return UI.hide_header_row('replyto');" class="iconbutton cancel" title="Удалить" tabindex="3">Удалить Ответить</a>
+		</td>
+		<td class="editfield"><input name="_replyto" spellcheck="false" id="_replyto" size="70" tabindex="1" value="" type="text"></td>
+	</tr><tr id="compose-followupto">
+		<td class="title top">
+			<label for="_followupto">Followup-To</label>
+			<a href="#followupto" onclick="return UI.hide_header_row('followupto');" class="iconbutton cancel" title="Удалить" tabindex="3">Удалить Followup-To</a>
+		</td>
+		<td class="editfield"><input name="_followupto" spellcheck="false" id="_followupto" size="70" tabindex="1" value="" type="text"></td>
+	</tr><tr>
+		<td></td>
+		<td class="formlinks">
+			<a href="#cc" onclick="return UI.show_header_row('cc')" id="cc-link" class="iconlink add" tabindex="3">Копия</a>
+			<a href="#bcc" onclick="return UI.show_header_row('bcc')" id="bcc-link" class="iconlink add" tabindex="3">Скрытая копия</a>
+			<a href="#reply-to" onclick="return UI.show_header_row('replyto')" id="replyto-link" class="iconlink add" tabindex="3">Кому ответить</a>
+			<a href="#followup-to" onclick="return UI.show_header_row('followupto')" id="followupto-link" class="iconlink add" tabindex="3">Добавить Followup-To</a>
+		</td>
+	</tr><tr>
+		<td class="title"><label for="compose-subject">Тема</label></td>
+		<td class="editfield"><input name="_subject" id="compose-subject" tabindex="1" spellcheck="true" value="" type="text"></td>
+	</tr>
+</tbody>
+</table>
+
+<div id="composebuttons" class="formbuttons">
+	<a class="button extwin" title="Открыть в новом окне" id="rcmbtn120" role="button" href="#" onclick="return rcmail.command('extwin','',this,event)"><span class="icon">Открыть в новом окне</span></a>
+</div>
+
+<!-- (collapsable) message options -->
+<div id="composeoptions" role="region" aria-labelledby="aria-label-composeoptions">
+	<h2 id="aria-label-composeoptions" class="voice">Параметры создания</h2>
+		<span class="composeoption">
+		<label>Редактор
+			<select name="editorSelector" tabindex="4" onchange="return rcmail.command('toggle-editor', {id: 'composebody', html: this.value == 'html'}, '', event)">
+<option value="html">HTML</option>
+<option value="plain" selected="selected">Текст</option>
+</select>
+</label>
+	</span>
+		<span class="composeoption">
+		<label for="rcmcomposepriority">Приоритет
+			<select name="_priority" id="rcmcomposepriority" tabindex="4">
+<option value="5">Низший</option>
+<option value="4">Низкий</option>
+<option value="0" selected="selected">Норм.</option>
+<option value="2">Высокий</option>
+<option value="1">Высоч.</option>
+</select>
+</label>
+	</span>
+		<span class="composeoption">
+		<label><input name="_mdn" id="rcmcomposereceipt" tabindex="4" value="1" type="checkbox"> Запрос ответа</label>
+	</span>
+			<span class="composeoption">
+		<label><input name="_dsn" id="rcmcomposedsn" tabindex="4" value="1" type="checkbox"> Уведомление о состоянии доставки</label>
+	</span>
+			<span class="composeoption">
+		<label>Сохранить в <select name="_store_target" style="max-width:12em" tabindex="4">
+<option value="">- не сохранять -</option>
+<option value="INBOX">Входящие</option>
+<option value="Drafts">Черновики</option>
+<option value="Sent" selected="selected">Отправленные</option>
+<option value="Spam">СПАМ</option>
+<option value="Trash">Корзина</option>
+</select>
+</label>
+	</span>
+		
+</div>
+
+</div>
+
+<!-- message compose body -->
+<div id="composeview-bottom">
+	<div id="composebodycontainer">
+		<label for="composebody" class="voice">Тело сообщения</label>
+		<input type="hidden" name="_draft_saveid"><input type="hidden" name="_draft" value="yes"><input type="hidden" name="_is_html" value="0"><input type="hidden" name="_framed" value="1"><textarea name="_message" id="composebody" cols="70" rows="20" tabindex="1"></textarea>
+<iframe name="savetarget" src="program/resources/blank.gif" style="width:0;height:0;border:none;visibility:hidden;" aria-hidden="true"></iframe>
+	</div>
+	<div id="compose-attachments" class="rightcol" role="region" aria-labelledby="aria-label-composeattachments">
+		<h2 id="aria-label-composeattachments" class="voice">Вложения</h2>
+		<div style="text-align:center; margin-bottom:20px">
+			<input type="button" class="button" onclick="UI.show_uploadform(event);return false" tabindex="1" id="rcmbtn121" value="Добавить вложение">
+		</div>
+		<ul id="attachment-list" class="attachmentslist" data-tabindex="1">
+</ul>
+
+		
+	</div>
+<!--
+	<div id="composeformbuttons" class="footerleft formbuttons floating">
+		<input type="button" class="button mainaction" tabindex="11" id="rcmbtn122" onclick="return rcmail.command('send','',this,event)" value="Отправить сейчас" disabled="disabled">
+		<input type="button" class="button" tabindex="12" id="rcmbtn123" onclick="return rcmail.command('savedraft','',this,event)" value="Сохранить черновик" disabled="disabled">
+		<input type="button" class="button" tabindex="13" id="rcmbtn124" onclick="return rcmail.command('list','',this,event)" value="Отмена" disabled="disabled">
+	</div>
+-->
+</div>
+
+</form>
+
+</div><!-- end mailview-right -->
+
+</div><!-- end mainscreencontent -->
+
+</div><!-- end mainscreen -->
+
+<div id="upload-dialog" class="propform popupdialog" title="Добавить вложение" aria-hidden="true">
+	<h2 id="aria-label-uploaddialog" class="voice">Форма выгрузки вложения</h2>
+	<div id="uploadform"><form id="uploadformFrm" name="uploadform" method="post" enctype="multipart/form-data" action="./?_task=mail">
+<input type="hidden" name="_token" value="99bd1d7986a134c2aaf05c0d66ee4104"><div><input type="file" name="_attachments[]" multiple="multiple"></div>
+<div class="hint">Максимальный размер файла 30 МБ</div>
+</form>
+</div>
+
+	<div class="formbuttons">
+		<input type="button" class="button mainaction" id="rcmbtn125" onclick="return rcmail.command('send-attachment','',this,event)" value="Загрузить" disabled="disabled">
+		<input type="button" class="button" onclick="UI.show_uploadform()" id="rcmbtn126" value="Отмена">
+	</div>
+</div>
+
+<div id="spellmenu" class="popupmenu" aria-hidden="true"></div>
+
+<div id="responsesmenu" class="popupmenu" aria-hidden="true">
+	<h3 id="aria-label-responsesmenu" class="voice">Меню заранее подготовленных ответов</h3>
+	<ul class="toolbarmenu" id="textresponsesmenu" role="menu" aria-labelledby="aria-label-responsesmenu">
+		<li role="separator" class="separator" id=""><label>Вставить ответ</label></li>
+		<ul id="responseslist"></ul>
+		<li role="separator" class="separator"><label>Управление ответами</label></li>
+		<li role="menuitem"><a unselectable="on" id="rcmbtn127" role="button" href="#" onclick="return rcmail.command('save-response','',this,event)">Создать новый ответ</a></li>
+		<li role="menuitem"><a id="rcmbtn128" role="button" href="#" onclick="return rcmail.command('responses','',this,event)">Редактировать ответы</a></li>
+	</ul>
+</div>
+
+<div id="messagestack"></div>
+
+<script type="text/javascript">
+
+// UI startup
+var UI = new rcube_mail_ui();
+$(document).ready(function(){
+	UI.set('errortitle', 'Произошла ошибка!');
+	UI.set('toggleoptions', 'Дополнительные параметры');
+	UI.init();
+});
+
+</script>
+
+
+
+
+<script>rcs_label_back = 'Назад';rcs_label_folders = 'Папки';rcs_label_search = 'Быстрый поиск';rcs_label_options = 'Параметры';rcs_label_attachment = 'Вложение';rcs_label_folders = 'Папки';rcs_label_section = 'Раздел';rcs_label_skin = 'Стиль оформления';rcs_label_login = 'Войти';rcs_label_disable_mobile_skin = 'Используйте оформление для ПК';rcs_label_enable_mobile_skin = 'Используйте мобильное оформление';rcs_config_product_name = 'Roundcube Webmail';rcs_disable_login_logo = false;rcs_disable_colors = false;rcs_disable_login_taskbar_outgoing = false;$('body').addClass('rcs-desktop rcs-desktop-skin xdesktop');if (typeof rcs_common != 'undefined') {rcs_common.runBeforeReady();$(document).ready(function() { rcs_common.runOnReady(); });}</script><script type="text/javascript">
+
+jQuery.extend(jQuery.ui.dialog.prototype.options.position, {
+                using: function(pos) {
+                    var me = jQuery(this),
+                        offset = me.css(pos).offset(),
+                        topOffset = offset.top - 12;
+                    if (topOffset < 0)
+                        me.css('top', pos.top - topOffset);
+                    if (offset.left + me.outerWidth() + 12 > jQuery(window).width())
+                        me.css('left', pos.left - 12);
+                }
+            });
+var googie = new GoogieSpell('skins/larry/images/googiespell/','./?_task=utils&_action=spell&_remote=1&lang=', false);
+googie.lang_chck_spell = "Проверить орфографию";
+googie.lang_rsm_edt = "Продолжить редактирование";
+googie.lang_close = "Закрыть";
+googie.lang_revert = "Отменить правки";
+googie.lang_no_error_found = "Орфографических ошибок не найдено.";
+googie.lang_learn_word = "Добавить в словарь";
+googie.setLanguages({"en_CA":"English (Canada)","en_GB":"English (GB)","en_US":"English (US)","ru_RU":"Russian (\u0420\u0443\u0441\u0441\u043a\u0438\u0439)"});
+googie.setCurrentLanguage('ru_RU');
+googie.setDecoration(false);
+googie.decorateTextarea('composebody');
+$(document).ready(function(){ 
+rcmail.init();
+});
+</script>
+
+</body>
+</html>

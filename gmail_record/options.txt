@@ -1,0 +1,9 @@
+-+
+-DCCI
+-D_IDA_XL
+-DWINNT
+-IC:\Users\lol\Documents\VuGen\Scripts\gmail_record
+-IC:\Program Files (x86)\Micro Focus\LoadRunner\include
+-ec:\users\lol\documents\vugen\scripts\gmail_record\\logfile.log
+c:\users\lol\documents\vugen\scripts\gmail_record\\combined_gmail_record.c
+c:\users\lol\documents\vugen\scripts\gmail_record\\pre_cci.c

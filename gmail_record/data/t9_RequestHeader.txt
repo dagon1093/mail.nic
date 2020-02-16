@@ -1,0 +1,18 @@
+POST /roundcubemail/?_task=mail&_unlock=loading1573069502049&_lang=ru_RU&_framed=1 HTTP/1.1
+Host: mail.nic.ru
+Connection: keep-alive
+Content-Length: 2276
+Cache-Control: max-age=0
+Origin: https://mail.nic.ru
+Upgrade-Insecure-Requests: 1
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36
+Sec-Fetch-User: ?1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: nested-navigate
+Referer: https://mail.nic.ru/roundcubemail/?_task=mail&_action=compose&_id=3693747465dc3227acb0dc
+Accept-Encoding: gzip, deflate, br
+Accept-Language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7
+Cookie: _ga=GA1.2.1789073779.1573069310; _gid=GA1.2.1906821879.1573069310; roundcube_sessid=r185t02m6dbfjbee75cmnk8m52; roundcube_sessauth=Sa02997684223da70996ffee767a481ca7d55e245; language=ru_RU
+

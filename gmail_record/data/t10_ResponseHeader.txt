@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Server: nginx/1.12.2
+Date: Wed, 06 Nov 2019 19:45:01 GMT
+Content-Type: text/html; charset=UTF-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+X-Powered-By: PHP/5.4.16
+Expires: Wed, 06 Nov 2019 19:45:00 GMT
+Cache-Control: private, no-cache, no-store, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Last-Modified: Wed, 06 Nov 2019 19:45:00 GMT
+X-DNS-Prefetch-Control: off
+X-Frame-Options: sameorigin
+Content-Language: ru
+

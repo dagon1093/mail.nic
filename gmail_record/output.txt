@@ -1,0 +1,93 @@
+Virtual User Script started at: 16.02.2020 1:02:53
+Starting action vuser_init.
+Web Turbo Replay of LoadRunner 12.60.0 for Windows 7; build 971 (��� 09 2018 11:27:13)  	[MsgId: MMSG-26983]
+Run mode: HTML  	[MsgId: MMSG-26993]
+Replay user agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.87 Safari/537.36  	[MsgId: MMSG-26988]
+Runtime Settings file: "C:\Users\lol\Documents\VuGen\Scripts\gmail_record\\default.cfg"  	[MsgId: MMSG-27141]
+Ending action vuser_init.
+Running Vuser...
+Starting iteration 1.
+Maximum number of concurrent connections per server: 6  	[MsgId: MMSG-26989]
+Starting action Action.
+Action.c(27): Notify: Transaction "0_homepage" started.
+Action.c(29): web_set_sockets_option started  	[MsgId: MMSG-26355]
+Action.c(29): web_set_sockets_option was successful  	[MsgId: MMSG-26392]
+Action.c(34): web_reg_find started  	[MsgId: MMSG-26355]
+Action.c(34): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Action.c(36): web_url("www.mail.nic.ru") started  	[MsgId: MMSG-26355]
+Action.c(36): Registered web_reg_find successful for "Text=Электронная почта от RU-CENTER" (count=1)  	[MsgId: MMSG-26364]
+Action.c(36): web_url("www.mail.nic.ru") was successful, 1575 body bytes, 239 header bytes  	[MsgId: MMSG-26386]
+Action.c(46): Notify: Transaction "0_homepage" ended with a "Pass" status (Duration: 0,1905 Wasted Time: 0,1418).
+Action.c(52): Notify: Transaction "1_login" started.
+Action.c(54): web_custom_request("json_auth.php") started  	[MsgId: MMSG-26355]
+Action.c(54): web_custom_request("json_auth.php") was successful, 0 body bytes, 448 header bytes  	[MsgId: MMSG-26386]
+Action.c(65): web_custom_request("json_auth.php_2") started  	[MsgId: MMSG-26355]
+Action.c(65): web_custom_request("json_auth.php_2") was successful, 91 body bytes, 678 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(85): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+Action.c(85): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+Action.c(96): web_reg_find started  	[MsgId: MMSG-26355]
+Action.c(96): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Action.c(97): web_reg_find started  	[MsgId: MMSG-26355]
+Action.c(97): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Action.c(100): web_url("roundcubemail") started  	[MsgId: MMSG-26355]
+Action.c(100): Detected non-resource "https://mail.nic.ru/roundcubemail/skins/outlook/watermark.html" in "https://mail.nic.ru/roundcubemail/?_task=mail"  	[MsgId: MMSG-26574]
+Action.c(100): Registered web_reg_find successful for "Text=Copyright" (count=1)  	[MsgId: MMSG-26364]
+Action.c(100): Registered web_reg_find successful for "Text=lt_test@q-expert.com" (count=1)  	[MsgId: MMSG-26364]
+Action.c(100): web_url("roundcubemail") was successful, 51465 body bytes, 725 header bytes, 106 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(110): web_url("watermark.html") started  	[MsgId: MMSG-26355]
+Action.c(110): Retrieving data from cache for "https://mail.nic.ru/roundcubemail/skins/outlook/watermark.html"  	[MsgId: MMSG-26558]
+Action.c(110): web_url("watermark.html") was successful, 0 body bytes, 0 header bytes  	[MsgId: MMSG-26386]
+Action.c(119): Notify: Transaction "1_login" ended with a "Pass" status (Duration: 0,7489 Wasted Time: 0,0288).
+Action.c(125): Notify: Transaction "2_message" started.
+Action.c(133): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+Action.c(133): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+Action.c(149): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+Action.c(149): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+Action.c(164): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+Action.c(164): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+Action.c(180): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+Action.c(180): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+Action.c(193): web_reg_find started  	[MsgId: MMSG-26355]
+Action.c(193): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Action.c(195): web_url("roundcubemail_2") started  	[MsgId: MMSG-26355]
+Action.c(195): Redirecting "https://mail.nic.ru/roundcubemail/?_task=mail&_mbox=INBOX&_action=compose" (redirection depth is 0)  	[MsgId: MMSG-26694]
+Action.c(195): To location "https://mail.nic.ru/roundcubemail/?_task=mail&_action=compose&_id=10168630305e486a911e994"  	[MsgId: MMSG-26693]
+Action.c(195): Detected non-resource "https://mail.nic.ru/roundcubemail/program/resources/blank.gif" in "https://mail.nic.ru/roundcubemail/?_task=mail&_action=compose&_id=10168630305e486a911e994"  	[MsgId: MMSG-26574]
+Action.c(195): HTML parsing not performed for Content-Type "image/gif" ("ParseHtmlContentType" Runtime Setting is "TEXT"). URL="https://mail.nic.ru/roundcubemail/program/resources/blank.gif"  	[MsgId: MMSG-26548]
+Action.c(195): Registered web_reg_find successful for "Text=Followup-To" (count=3)  	[MsgId: MMSG-26364]
+Action.c(195): web_url("roundcubemail_2") was successful, 36333 body bytes, 1218 header bytes, 94 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(205): Notify: Transaction "2_message" ended with a "Pass" status (Duration: 0,2438 Wasted Time: 0,0133).
+Action.c(210): Notify: Transaction "3_sent" started.
+Action.c(214): web_reg_find started  	[MsgId: MMSG-26355]
+Action.c(214): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Action.c(216): web_submit_data("roundcubemail_5") started  	[MsgId: MMSG-26355]
+Action.c(216): Registered web_reg_find successful for "Text=Sent" (count=1)  	[MsgId: MMSG-26364]
+Action.c(216): web_submit_data("roundcubemail_5") was successful, 538 body bytes, 468 header bytes, 12 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(252): web_reg_find started  	[MsgId: MMSG-26355]
+Action.c(252): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Action.c(256): web_url("roundcubemail_6") started  	[MsgId: MMSG-26355]
+Action.c(256): Detected non-resource "https://mail.nic.ru/roundcubemail/skins/outlook/watermark.html" in "https://mail.nic.ru/roundcubemail/?_task=mail&_refresh=1&_mbox=INBOX"  	[MsgId: MMSG-26574]
+Action.c(256): Retrieving data from cache for "https://mail.nic.ru/roundcubemail/skins/outlook/watermark.html"  	[MsgId: MMSG-26558]
+Action.c(256): Registered web_reg_find successful for "Text=Copyright (C) 2005-2014 The Roundcube Dev Team" (count=1)  	[MsgId: MMSG-26364]
+Action.c(256): web_url("roundcubemail_6") was successful, 51238 body bytes, 468 header bytes, 126 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(266): Notify: Transaction "3_sent" ended with a "Pass" status (Duration: 0,3797 Wasted Time: 0,0101).
+Action.c(271): Notify: Transaction "4_logout" started.
+Action.c(273): web_reg_find started  	[MsgId: MMSG-26355]
+Action.c(273): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Action.c(277): web_url("roundcubemail_7") started  	[MsgId: MMSG-26355]
+Action.c(277): Redirecting "https://mail.nic.ru/roundcubemail/?_task=logout&_token=99bd1d7986a134c2aaf05c0d66ee4104" (redirection depth is 0)  	[MsgId: MMSG-26694]
+Action.c(277): To location "http://mail.nic.ru/"  	[MsgId: MMSG-26693]
+Action.c(277): Redirecting "http://mail.nic.ru/" (redirection depth is 1)  	[MsgId: MMSG-26694]
+Action.c(277): To location "https://mail.nic.ru/"  	[MsgId: MMSG-26693]
+Action.c(277): Registered web_reg_find successful for "Text=RU-CENTER" (count=1)  	[MsgId: MMSG-26364]
+Action.c(277): web_url("roundcubemail_7") was successful, 9944 body bytes, 1170 header bytes  	[MsgId: MMSG-26386]
+Action.c(287): web_url("www.mail.nic.ru_2") started  	[MsgId: MMSG-26355]
+Action.c(287): Retrieving data from cache for "https://www.mail.nic.ru/"  	[MsgId: MMSG-26558]
+Action.c(287): web_url("www.mail.nic.ru_2") was successful, 0 body bytes, 0 header bytes  	[MsgId: MMSG-26386]
+Action.c(296): Notify: Transaction "4_logout" ended with a "Pass" status (Duration: 0,1070 Wasted Time: 0,0082).
+Ending action Action.
+Ending iteration 1.
+Ending Vuser...
+Starting action vuser_end.
+Ending action vuser_end.
+Vuser Terminated.

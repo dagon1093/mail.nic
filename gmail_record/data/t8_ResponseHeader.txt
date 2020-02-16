@@ -1,0 +1,14 @@
+HTTP/1.1 200 OK
+Server: nginx/1.12.2
+Date: Wed, 06 Nov 2019 19:44:55 GMT
+Content-Type: text/plain; charset=UTF-8
+Content-Length: 285
+Connection: keep-alive
+X-Powered-By: PHP/5.4.16
+Expires: Wed, 06 Nov 2019 19:44:55 GMT
+Cache-Control: private, no-cache, no-store, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Last-Modified: Wed, 06 Nov 2019 19:44:55 GMT
+X-DNS-Prefetch-Control: off
+X-Frame-Options: sameorigin
+

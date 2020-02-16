@@ -1,0 +1,12 @@
+var configMail = {
+  nic: 'https://www.nic.ru',
+  mail: 'https://mail.nic.ru',
+  images: [
+    '//storage.nic.ru/ru/images/jpg/shb8ba1.jpg',
+    '//storage.nic.ru/ru/images/jpg/shut4.jpg',
+    '//storage.nic.ru/ru/images/jpg/shutte1.jpg',
+    '//storage.nic.ru/ru/images/jpg/shutte2.jpg',
+    '//storage.nic.ru/ru/images/jpg/shutterstock-642094387.jpg',
+    '//storage.nic.ru/ru/images/jpg/iyui1.jpg'
+  ]
+};

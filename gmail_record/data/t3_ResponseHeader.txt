@@ -1,0 +1,14 @@
+HTTP/1.1 200 OK
+Server: nginx/1.12.2
+Date: Wed, 06 Nov 2019 19:43:32 GMT
+Content-Type: application/json
+Transfer-Encoding: chunked
+Connection: keep-alive
+Set-Cookie: roundcube_sessauth=-del-; expires=Wed, 06-Nov-2019 19:42:32 GMT; path=/; httponly
+Set-Cookie: roundcube_sessid=r185t02m6dbfjbee75cmnk8m52; path=/; HttpOnly
+Set-Cookie: roundcube_sessauth=Sa02997684223da70996ffee767a481ca7d55e245; path=/; httponly
+Access-Control-Allow-Origin: https://www.mail.nic.ru
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: POST, OPTIONS
+Access-Control-Allow-Headers: Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type
+

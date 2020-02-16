@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title>Roundcube Webmail :: Входящие</title>
+<meta name="viewport" content="" id="viewport" />
+<link rel="shortcut icon" href="skins/larry/images/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="skins/larry/styles.min.css?s=1493368165" />
+<link rel="stylesheet" type="text/css" href="skins/larry/mail.min.css?s=1493368165" />
+<!--[if IE 9]><link rel="stylesheet" type="text/css" href="skins/larry/svggradients.min.css?s=1493368165" /><![endif]-->
+<link rel="stylesheet" type="text/css" href="plugins/markasjunk2/skins/larry/markasjunk2.css?s=1459956190">
+<link rel="stylesheet" type="text/css" href="plugins/rcs_skins/styles.css?s=1461156894">
+<link rel="stylesheet" type="text/css" href="plugins/jqueryui/themes/larry/jquery-ui-1.10.4.custom.css?s=1493368164">
+<script type="text/javascript" src="skins/larry/ui.min.js?s=1493368165"></script>
+
+<link rel="stylesheet" type="text/css" href="skins/outlook/common/common.css?s=1461156894" />
+<script type="text/javascript" src="skins/outlook/common/common.min.js?s=1461156894"></script>
+
+    <link rel="stylesheet" type="text/css" href="skins/outlook/common/desktop.css?s=1461156894" />
+
+
+<script type='text/javascript' src='skins/outlook/skin/colors.min.js?s=1461156894'></script>
+
+    <link rel="stylesheet" type="text/css" href="skins/outlook/common/st_buttons_desktop.css?s=1461156894" />
+    <link rel="stylesheet" type="text/css" href="skins/outlook/common/st_menus_desktop.css?s=1461156894" />
+    <link rel="stylesheet" type="text/css" href="skins/outlook/common/ic_fa_desktop.css?s=1461156894" />
+    <link rel="stylesheet" type="text/css" href="skins/outlook/common/remove_list_icons.css?s=1461156894" />
+    <link rel="stylesheet" type="text/css" href="skins/outlook/skin/skin_desktop.css?s=1461156894" />
+
+
+<style type="text/css">
+	#mailview-top { height: 276px; }
+	#mailview-bottom { top: 330px; height: auto; display: block; }
+	#mailpreviewframe { display: block; }
+</style>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<script src="program/js/jquery.min.js?s=1493368164" type="text/javascript"></script>
+<script src="program/js/common.min.js?s=1493368164" type="text/javascript"></script>
+<script src="program/js/app.min.js?s=1493368164" type="text/javascript"></script>
+<script src="program/js/treelist.min.js?s=1493368164" type="text/javascript"></script>
+<script src="program/js/list.min.js?s=1493368164" type="text/javascript"></script>
+<script type="text/javascript">
+
+/*
+        @licstart  The following is the entire license notice for the 
+        JavaScript code in this page.
+
+        Copyright (C) 2005-2014 The Roundcube Dev Team
+
+        The JavaScript code in this page is free software: you can redistribute
+        it and/or modify it under the terms of the GNU General Public License
+        as published by the Free Software Foundation, either version 3 of
+        the License, or (at your option) any later version.
+
+        The code is distributed WITHOUT ANY WARRANTY; without even the implied
+        warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+        See the GNU GPL for more details.
+
+        @licend  The above is the entire license notice
+        for the JavaScript code in this page.
+*/
+var rcmail = new rcube_webmail();
+rcmail.set_env({"task":"mail","x_frame_options":"sameorigin","standard_windows":false,"locale":"ru_RU","cookie_domain":"","cookie_path":"\/","cookie_secure":false,"skin":"larry","refresh_interval":60,"session_lifetime":7200,"action":"","comm_path":".\/?_task=mail","user_id":"e9f291c49acc2e4c283bd4c62cdc22c6","compose_extwin":false,"markasjunk2_override":false,"markasjunk2_ham_mailbox":"INBOX","markasjunk2_spam_mailbox":"Spam","markasjunk2_move_spam":false,"markasjunk2_move_ham":false,"date_format":"yy-mm-dd","rcs_phone":false,"rcs_tablet":false,"rcs_mobile":false,"rcs_desktop":true,"rcs_device":"desktop","rcs_color":false,"rcs_skin":"outlook","rcs_skin_type":"desktop","rcs_login_branding":null,"rcs_frame_branding":null,"search_mods":{"*":{"subject":1,"from":1},"Sent":{"subject":1,"to":1},"Drafts":{"subject":1,"to":1}},"mailbox":"INBOX","pagesize":50,"delimiter":"\/","threading":false,"threads":true,"reply_all_mode":0,"preview_pane_mark_read":0,"quota":true,"drafts_mailbox":"Drafts","trash_mailbox":"Trash","junk_mailbox":"Spam","read_when_deleted":true,"display_next":true,"unreadwrap":"%s","collapsed_folders":"","mailboxes":{"INBOX":{"id":"INBOX","name":"\u0412\u0445\u043e\u0434\u044f\u0449\u0438\u0435","virtual":false,"class":"inbox"},"Drafts":{"id":"Drafts","name":"\u0427\u0435\u0440\u043d\u043e\u0432\u0438\u043a\u0438","virtual":false,"class":"drafts"},"Sent":{"id":"Sent","name":"\u041e\u0442\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u043d\u044b\u0435","virtual":false,"class":"sent"},"Spam":{"id":"Spam","name":"\u0421\u041f\u0410\u041c","virtual":false,"class":"junk"},"Trash":{"id":"Trash","name":"\u041a\u043e\u0440\u0437\u0438\u043d\u0430","virtual":false,"class":"trash"}},"mailboxes_list":["INBOX","Drafts","Sent","Spam","Trash"],"col_movable":true,"autoexpand_threads":0,"sort_col":"","sort_order":"DESC","messages":[],"listcols":["threads","subject","status","fromto","date","size","flag","attachment"],"disabled_sort_col":false,"disabled_sort_order":false,"coltypes":{"threads":{"className":"threads","id":"rcmthreads","label":"","sortable":false},"subject":{"className":"subject","id":"rcmsubject","label":"\u0422\u0435\u043c\u0430","sortable":true},"status":{"className":"status","id":"rcmstatus","label":"","sortable":false},"fromto":{"className":"fromto","id":"rcmfromto","label":"\u041e\u0442","sortable":true},"date":{"className":"date","id":"rcmdate","label":"\u0414\u0430\u0442\u0430","sortable":true},"size":{"className":"size","id":"rcmsize","label":"\u0420\u0430\u0437\u043c\u0435\u0440","sortable":true},"flag":{"className":"flag","id":"rcmflag","label":"","sortable":false},"attachment":{"className":"attachment","id":"rcmattachment","label":"","sortable":false}},"contentframe":"messagecontframe","blankpage":"skins\/outlook\/watermark.html","max_filesize":31457280,"filesizeerror":"\u0417\u0430\u0433\u0440\u0443\u0436\u0435\u043d\u043d\u044b\u0439 \u0444\u0430\u0439\u043b \u0431\u043e\u043b\u044c\u0448\u0435 \u043c\u0430\u043a\u0441\u0438\u043c\u0430\u043b\u044c\u043d\u043e\u0433\u043e \u0440\u0430\u0437\u043c\u0435\u0440\u0430 \u0432 30 \u041c\u0411.","request_token":"bb63484f71116a8a998676db194f2039"});
+rcmail.add_label({"loading":"\u0417\u0430\u0433\u0440\u0443\u0437\u043a\u0430...","servererror":"\u041e\u0448\u0438\u0431\u043a\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430!","connerror":"\u041e\u0448\u0438\u0431\u043a\u0430 \u0441\u043e\u0435\u0434\u0438\u043d\u0435\u043d\u0438\u044f (\u0421\u0431\u043e\u0439 \u043f\u043e\u0434\u043a\u043b\u044e\u0447\u0435\u043d\u0438\u044f \u043a \u0441\u0435\u0440\u0432\u0435\u0440\u0443)!","requesttimedout":"\u041f\u0440\u0435\u0432\u044b\u0448\u0435\u043d\u043e \u0432\u0440\u0435\u043c\u044f \u043e\u0436\u0438\u0434\u0430\u043d\u0438\u044f \u0437\u0430\u043f\u0440\u043e\u0441\u0430","refreshing":"\u041e\u0431\u043d\u043e\u0432\u043b\u0435\u043d\u0438\u0435...","windowopenerror":"\u0412\u0441\u043f\u043b\u044b\u0432\u0430\u044e\u0449\u0435\u0435 \u043e\u043a\u043d\u043e \u0431\u044b\u043b\u043e \u0437\u0430\u0431\u043b\u043e\u043a\u0438\u0440\u043e\u0432\u0430\u043d\u043e!","uploadingmany":"\u0417\u0430\u0433\u0440\u0443\u0437\u043a\u0430 \u0444\u0430\u0439\u043b\u043e\u0432...","markasjunk2.buttonjunk":"\u041f\u043e\u043c\u0435\u0442\u0438\u0442\u044c \u043a\u0430\u043a \u0441\u043f\u0430\u043c","markasjunk2.markasjunk":"\u041a\u0430\u043a \u0441\u043f\u0430\u043c","markasjunk2.buttonnotjunk":"\u042d\u0442\u043e \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435 \u043d\u0435 \u0441\u043f\u0430\u043c","markasjunk2.markasnotjunk":"\u041d\u0435 \u0441\u043f\u0430\u043c","markasjunk2.notjunk":"\u041d\u0435 \u0441\u043f\u0430\u043c","markasjunk2.reportedasjunk":"\u041f\u043e\u043c\u0435\u0447\u0435\u043d\u043e \u043a\u0430\u043a \u0441\u043f\u0430\u043c","markasjunk2.reportedasnotjunk":"\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435 \u043f\u0435\u0440\u0435\u043c\u0435\u0449\u0435\u043d\u043e \u0432\u043e \u0412\u0445\u043e\u0434\u044f\u0449\u0438\u0435","checkingmail":"\u041f\u0440\u043e\u0432\u0435\u0440\u043a\u0430 \u043d\u043e\u0432\u044b\u0445 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0439...","deletemessage":"\u0412 \u043a\u043e\u0440\u0437\u0438\u043d\u0443","movemessagetotrash":"\u041f\u0435\u0440\u0435\u043c\u0435\u0441\u0442\u0438\u0442\u044c \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0435 \u0432 \u043a\u043e\u0440\u0437\u0438\u043d\u0443","movingmessage":"\u041f\u0435\u0440\u0435\u043c\u0435\u0449\u0435\u043d\u0438\u0435 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u044f(\u0439)\u2026","copyingmessage":"\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u044f(\u0439)...","deletingmessage":"\u0423\u0434\u0430\u043b\u0435\u043d\u0438\u0435 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u044f(\u0439)...","markingmessage":"\u0412\u044b\u0434\u0435\u043b\u0435\u043d\u0438\u0435 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u044f(\u0439)...","copy":"\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c","move":"\u041f\u0435\u0440\u0435\u043c\u0435\u0441\u0442\u0438\u0442\u044c","quota":"\u041a\u0432\u043e\u0442\u0430","replyall":"\u041e\u0442\u0432\u0435\u0442\u0438\u0442\u044c \u0432\u0441\u0435\u043c","replylist":"\u041e\u0442\u0432\u0435\u0442\u0438\u0442\u044c \u0432 \u0441\u043f\u0438\u0441\u043e\u043a \u0440\u0430\u0441\u0441\u044b\u043b\u043a\u0438","stillsearching":"\u041f\u043e\u0438\u0441\u043a...","flagged":"\u041f\u043e\u043c\u0435\u0447\u0435\u043d\u043d\u044b\u0435","unflagged":"\u041d\u0435 \u043f\u043e\u043c\u0435\u0447\u0435\u043d\u043d\u044b\u0435","unread":"\u041d\u0435\u043f\u0440\u043e\u0447\u0438\u0442\u0430\u043d\u043d\u044b\u0435","deleted":"\u0423\u0434\u0430\u043b\u0435\u043d\u043d\u044b\u0435","replied":"\u041e\u0442\u0432\u0435\u0447\u0435\u043d\u043e","forwarded":"\u041f\u0435\u0440\u0435\u0441\u043b\u0430\u043d\u043d\u044b\u0435","priority":"\u041f\u0440\u0438\u043e\u0440\u0438\u0442\u0435\u0442","withattachment":"\u0421 \u0432\u043b\u043e\u0436\u0435\u043d\u0438\u0435\u043c","fileuploaderror":"\u041e\u0448\u0438\u0431\u043a\u0430 \u0437\u0430\u0433\u0440\u0443\u0437\u043a\u0438 \u0444\u0430\u0439\u043b\u0430.","searching":"\u041f\u043e\u0438\u0441\u043a...","purgefolderconfirm":"\u0412\u044b \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043b\u044c\u043d\u043e \u0445\u043e\u0442\u0438\u0442\u0435 \u0443\u0434\u0430\u043b\u0438\u0442\u044c \u0432\u0441\u0435 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u044f \u0432 \u044d\u0442\u043e\u0439 \u043f\u0430\u043f\u043a\u0435?","deletemessagesconfirm":"\u0412\u044b \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0442\u0435\u043b\u044c\u043d\u043e \u0445\u043e\u0442\u0438\u0442\u0435 \u0443\u0434\u0430\u043b\u0438\u0442\u044c \u0432\u044b\u0431\u0440\u0430\u043d\u043d\u044b\u0435 \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u044f?","from":"\u041e\u0442","to":"\u041a\u043e\u043c\u0443","selectimportfile":"\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0444\u0430\u0439\u043b \u0434\u043b\u044f \u0437\u0430\u0433\u0440\u0443\u0437\u043a\u0438.","importwait":"\u0418\u043c\u043f\u043e\u0440\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435, \u043f\u043e\u0436\u0430\u043b\u0443\u0439\u0441\u0442\u0430, \u043f\u043e\u0434\u043e\u0436\u0434\u0438\u0442\u0435..."});
+rcmail.gui_container("topline-left","topline-left");
+rcmail.gui_container("topline-center","topline-center");
+rcmail.gui_container("topline-right","topline-right");
+rcmail.gui_container("taskbar","taskbar");
+rcmail.gui_container("toolbar","mailtoolbar");
+rcmail.gui_container("forwardmenu","forwardmenu-menu");
+rcmail.gui_container("replyallmenu","replyallmenu-menu");
+rcmail.gui_container("messagemenu","messagemenu-menu");
+rcmail.gui_container("markmenu","markmessagemenu-menu");
+rcmail.gui_container("listcontrols","listcontrols");
+rcmail.gui_container("mailboxoptions","mailboxoptionsmenu");
+rcmail.register_button('plugin.markasjunk2.junk', 'rcmbtn100', 'link', 'button markasjunk2', 'button markasjunk2Sel', '');
+rcmail.register_button('plugin.markasjunk2.not_junk', 'rcmbtn101', 'link', 'button markasnotjunk2', 'button markasnotjunk2Sel', '');
+rcmail.register_button('logout', 'rcmbtn103', 'link', '', '', '');
+rcmail.register_button('mail', 'rcmbtn104', 'link', '', 'button-mail button-selected', '');
+rcmail.register_button('addressbook', 'rcmbtn105', 'link', '', 'button-addressbook button-selected', '');
+rcmail.register_button('settings', 'rcmbtn106', 'link', '', 'button-settings button-selected', '');
+rcmail.register_button('logout', 'rcmbtn107', 'link', '', 'button-logout', '');
+rcmail.register_button('checkmail', 'rcmbtn108', 'link', 'button checkmail', 'button checkmail pressed', '');
+rcmail.register_button('compose', 'rcmbtn109', 'link', 'button compose', 'button compose pressed', '');
+rcmail.register_button('reply', 'rcmbtn110', 'link', 'button reply', 'button reply pressed', '');
+rcmail.register_button('reply-all', 'rcmbtn111', 'link', 'button reply-all', 'button reply-all pressed', '');
+rcmail.register_button('forward', 'rcmbtn112', 'link', 'button forward', 'button forward pressed', '');
+rcmail.register_button('delete', 'rcmbtn113', 'link', 'button delete', 'button delete pressed', '');
+rcmail.register_button('forward-inline', 'rcmbtn114', 'link', 'forwardlink active', '', '');
+rcmail.register_button('forward-attachment', 'rcmbtn115', 'link', 'forwardattachmentlink active', '', '');
+rcmail.register_button('reply-all', 'rcmbtn116', 'link', 'replyalllink active', '', '');
+rcmail.register_button('reply-list', 'rcmbtn117', 'link', 'replylistlink active', '', '');
+rcmail.register_button('print', 'rcmbtn118', 'link', 'icon active', '', '');
+rcmail.register_button('download', 'rcmbtn119', 'link', 'icon active', '', '');
+rcmail.register_button('edit', 'rcmbtn120', 'link', 'icon active', '', '');
+rcmail.register_button('viewsource', 'rcmbtn121', 'link', 'icon active', '', '');
+rcmail.register_button('move', 'rcmbtn122', 'link', 'icon active', '', '');
+rcmail.register_button('copy', 'rcmbtn123', 'link', 'icon active', '', '');
+rcmail.register_button('open', 'rcmbtn124', 'link', 'icon active', '', '');
+rcmail.register_button('mark', 'rcmbtn125', 'link', 'icon active', '', '');
+rcmail.register_button('mark', 'rcmbtn126', 'link', 'icon active', '', '');
+rcmail.register_button('mark', 'rcmbtn127', 'link', 'icon active', '', '');
+rcmail.register_button('mark', 'rcmbtn128', 'link', 'icon active', '', '');
+rcmail.gui_object('search_filter', 'messagessearchfilter');
+rcmail.register_button('menu-open', 'searchmenulink', 'link', '', '', '');
+rcmail.gui_object('qsearchbox', 'quicksearchbox');
+rcmail.register_button('reset-search', 'searchreset', 'link', '', '', '');
+rcmail.gui_object('mailboxlist', 'mailboxlist');
+rcmail.gui_object('quotadisplay', 'quotadisplay');
+rcmail.gui_object('messagelist', 'messagelist');
+rcmail.register_button('set-listmode', 'maillistmode', 'link', 'iconbutton listmode', '', '');
+rcmail.register_button('set-listmode', 'mailthreadmode', 'link', 'iconbutton threadmode', '', '');
+rcmail.gui_object('countdisplay', 'rcmcountdisplay');
+rcmail.register_button('firstpage', 'rcmbtn129', 'link', 'button firstpage', 'button firstpage pressed', '');
+rcmail.register_button('previouspage', 'rcmbtn130', 'link', 'button prevpage', 'button prevpage pressed', '');
+rcmail.register_button('nextpage', 'rcmbtn131', 'link', 'button nextpage', 'button nextpage pressed', '');
+rcmail.register_button('lastpage', 'rcmbtn132', 'link', 'button lastpage', 'button lastpage pressed', '');
+rcmail.register_button('move', 'rcmbtn133', 'link', 'active', '', '');
+rcmail.register_button('copy', 'rcmbtn134', 'link', 'active', '', '');
+rcmail.register_button('expunge', 'rcmbtn135', 'link', 'active', '', '');
+rcmail.register_button('purge', 'rcmbtn136', 'link', 'active', '', '');
+rcmail.register_button('import-messages', 'rcmbtn137', 'link', 'active', '', '');
+rcmail.register_button('settings.folders', 'rcmbtn138', 'link', 'active', '', '');
+rcmail.register_button('select-all', 'rcmbtn139', 'link', 'icon active', '', '');
+rcmail.register_button('select-all', 'rcmbtn140', 'link', 'icon active', '', '');
+rcmail.register_button('select-all', 'rcmbtn141', 'link', 'icon active', '', '');
+rcmail.register_button('select-all', 'rcmbtn142', 'link', 'icon active', '', '');
+rcmail.register_button('select-all', 'rcmbtn143', 'link', 'icon active', '', '');
+rcmail.register_button('select-none', 'rcmbtn144', 'link', 'icon active', '', '');
+rcmail.register_button('expand-all', 'rcmbtn145', 'link', 'icon active', '', '');
+rcmail.register_button('expand-unread', 'rcmbtn146', 'link', 'icon active', '', '');
+rcmail.register_button('collapse-all', 'rcmbtn147', 'link', 'icon active', '', '');
+rcmail.register_button('menu-save', 'listmenusave', 'input', '', '', '');
+rcmail.register_button('menu-close', 'listmenucancel', 'input', '', '', '');
+rcmail.gui_object('importform', 'uploadformFrm');
+rcmail.register_button('import-messages', 'rcmbtn148', 'input', '', '', '');
+rcmail.gui_object('message', 'messagestack');
+</script>
+
+<script type="text/javascript" src="plugins/markasjunk2/markasjunk2.js?s=1459956190"></script>
+<script type="text/javascript" src="plugins/rcs_skins/scripts.js?s=1461156894"></script>
+<script type="text/javascript" src="plugins/jqueryui/js/jquery-ui-1.10.4.custom.min.js?s=1493368164"></script>
+<script type="text/javascript" src="plugins/jqueryui/js/i18n/jquery.ui.datepicker-ru.js?s=1493368164"></script>
+</head>
+<body class="minwidth">
+
+<div id="header">
+<div id="topline" role="banner" aria-labelledby="aria-label-topnav">
+	<h2 id="aria-label-topnav" class="voice">Управление окном</h2>
+	<div class="topleft">
+		
+		<a class="about-link" onclick="UI.show_about(this);return false" id="rcmbtn102" role="button" href="#">О программе</a>
+				<a href="https://www.nic.ru/about/contact_ncc.html" target="_blank" class="support-link" id="supportlink">Поддержка</a>
+			</div>
+	
+	<div class="topright">
+	
+			<span class="username">a.yakovlev@q-expert.com</span>
+		<a class="button-logout" id="rcmbtn103" role="button" href="./?_task=logout" onclick="return rcmail.command('switch-task','logout',this,event)">Выход</a>
+	
+	</div>
+</div>
+
+<div id="topnav">
+	<h2 id="aria-label-tasknav" class="voice">Задачи приложения</h2>
+	<div id="taskbar" class="topright" role="navigation" aria-labelledby="aria-label-tasknav">
+		<a class="button-mail" id="rcmbtn104" role="button" href="./?_task=mail" onclick="return rcmail.command('switch-task','mail',this,event)"><span class="button-inner">Почта</span></a>
+		<a class="button-addressbook" id="rcmbtn105" role="button" href="./?_task=addressbook" onclick="return rcmail.command('switch-task','addressbook',this,event)"><span class="button-inner">Контакты</span></a>
+		
+		<a class="button-settings" id="rcmbtn106" role="button" href="./?_task=settings" onclick="return rcmail.command('switch-task','settings',this,event)"><span class="button-inner">Настройки</span></a>
+		<a class="button-logout" id="rcmbtn107" role="button" href="./?_task=logout" onclick="return rcmail.command('switch-task','logout',this,event)"><span class="button-inner">Выход</span></a>
+		<span class="minmodetoggle" role="presentation"></span>
+	</div>
+	<img src="skins/larry/images/roundcube_logo.png" id="toplogo" alt="Logo" onclick="if(window.rcmail)rcmail.command('switch-task','mail')">
+</div>
+
+<br style="clear:both" />
+</div>
+
+
+
+    <div style='display:none'>
+        <img src="skins/outlook/skin/images/logo.png" id="rcs-logo" alt="Logo" onclick="if(window.rcmail)rcmail.command('switch-task','mail')">
+    </div>
+
+
+
+
+
+<div id="mainscreen">
+
+<h1 class="voice">Почта</h1>
+
+<!-- toolbar -->
+<h2 id="aria-label-toolbar" class="voice">Панель инструментов приложения</h2>
+<div id="messagetoolbar" class="toolbar" role="toolbar" aria-labelledby="aria-label-toolbar">
+	<a class="button checkmail disabled" title="Доставить почту" id="rcmbtn108" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('checkmail','',this,event)">Обновить</a>
+	<a class="button compose disabled" title="Новое сообщение" id="rcmbtn109" role="button" tabindex="-1" aria-disabled="true" href="./?_task=mail&amp;_action=compose" onclick="return rcmail.command('compose','',this,event)">Написать сообщение</a>
+<span class="spacer"></span>
+<a class="button reply disabled" title="Ответить" id="rcmbtn110" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('reply','',this,event)">Ответить</a>
+<span class="dropbutton">
+	<a class="button reply-all disabled" title="Ответить по списку или отправителю и всем получателям" id="rcmbtn111" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('reply-all','',this,event)">Ответить всем</a>
+	<a href="#reply-all" class="dropbuttontip" id="replyallmenulink" onclick="UI.toggle_popup('replyallmenu',event);return false" aria-haspopup="true" aria-expanded="false" aria-owns="replyallmenu-menu" tabindex="0">Reply-all options</a>
+</span>
+<span class="dropbutton">
+	<a class="button forward disabled" title="Переслать" id="rcmbtn112" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('forward','',this,event)">Переслать</a>
+	<a href="#forward" class="dropbuttontip" id="forwardmenulink" onclick="UI.toggle_popup('forwardmenu',event);return false" aria-haspopup="true" aria-expanded="false" aria-owns="forwardmenu-menu" tabindex="0">Forwarding options</a>
+</span>
+<a class="button delete disabled" title="В корзину" id="rcmbtn113" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('delete','',this,event)">Удалить</a>
+<a class="button buttonPas markasjunk2 disabled" title="Пометить как спам" style="" id="rcmbtn100" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('plugin.markasjunk2.junk','',this,event)">СПАМ</a>
+<a class="button buttonPas markasnotjunk2 disabled" title="Это сообщение не спам" style="display: none;" id="rcmbtn101" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('plugin.markasjunk2.not_junk','',this,event)">Не спам</a>
+
+<a id="markmessagemenulink" class="button markmessage" title="Пометить сообщения" onclick="UI.toggle_popup('markmessagemenu',event);return false" aria-haspopup="true" aria-expanded="false" aria-owns="markmessagemenu-menu" role="button" href="#">Пометить</a>
+<a id="messagemenulink" class="button more" title="Дополнительные действия..." onclick="UI.toggle_popup('messagemenu',event);return false" aria-haspopup="true" aria-expanded="false" aria-owns="messagemenu-menu" role="button" href="#">Еще</a>
+
+<div id="forwardmenu" class="popupmenu" aria-hidden="true">
+	<h3 id="aria-label-forwardmenu" class="voice">Опции пересылки</h3>
+	<ul id="forwardmenu-menu" class="toolbarmenu" role="menu" aria-labelledby="aria-label-forwardmenu">
+		<li role="menuitem"><a class="forwardlink" id="rcmbtn114" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('forward-inline','sub',this,event)">Переслать в теле письма</a></li>
+		<li role="menuitem"><a class="forwardattachmentlink" id="rcmbtn115" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('forward-attachment','sub',this,event)">Переслать как вложение</a></li>
+		
+	</ul>
+</div>
+
+<div id="replyallmenu" class="popupmenu" aria-hidden="true">
+	<h3 id="aria-label-replyallmenu" class="voice">Параметры ответа всем</h3>
+	<ul id="replyallmenu-menu" class="toolbarmenu" role="menu" aria-labelledby="aria-label-replyallmenu">
+		<li role="menuitem"><a class="replyalllink" id="rcmbtn116" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('reply-all','sub',this,event)">Ответить всем</a></li>
+		<li role="menuitem"><a class="replylistlink" id="rcmbtn117" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('reply-list','sub',this,event)">Ответить в список рассылки</a></li>
+		
+	</ul>
+</div>
+
+<div id="messagemenu" class="popupmenu" aria-hidden="true">
+	<h3 id="aria-label-messagemenu" class="voice">Дополнительные действия с сообщением</h3>
+	<ul id="messagemenu-menu" class="toolbarmenu iconized" role="menu" aria-labelledby="aria-label-messagemenu">
+		<li role="menuitem"><a class="icon" id="rcmbtn118" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('print','',this,event)"><span class="icon print">Печать</span></a></li>
+		<li role="menuitem"><a class="icon" id="rcmbtn119" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('download','',this,event)"><span class="icon download">Сохранить (.eml)</span></a></li>
+		<li role="menuitem"><a class="icon" id="rcmbtn120" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('edit','new',this,event)"><span class="icon edit">Редактировать как новое</span></a></li>
+		<li role="menuitem"><a class="icon" id="rcmbtn121" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('viewsource','',this,event)"><span class="icon viewsource">Исходный текст</span></a></li>
+		<li role="menuitem"><a class="icon" id="rcmbtn122" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('move','',this,event)"><span class="icon move folder-selector-link">Переместить в...</span></a></li>
+		<li role="menuitem"><a class="icon" id="rcmbtn123" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('copy','',this,event)"><span class="icon copy folder-selector-link">Копировать в...</span></a></li>
+		<li role="menuitem"><a target="_blank" class="icon" id="rcmbtn124" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('open','',this,event)"><span class="icon extwin">Открыть в новом окне</span></a></li>
+		
+	</ul>
+</div>
+
+<div id="markmessagemenu" class="popupmenu" aria-hidden="true">
+	<h3 id="aria-label-markmessagemenu" class="voice">Отметить выделенные сообщения как...</h3>
+	<ul id="markmessagemenu-menu" class="toolbarmenu iconized" role="menu" aria-labelledby="aria-label-markmessagemenu">
+		<li role="menuitem"><a class="icon" id="rcmbtn125" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('mark','read',this,event)"><span class="icon read">Как прочитанное</span></a></li>
+		<li role="menuitem"><a class="icon" id="rcmbtn126" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('mark','unread',this,event)"><span class="icon unread">Как непрочитанное</span></a></li>
+		<li role="menuitem"><a class="icon" id="rcmbtn127" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('mark','flagged',this,event)"><span class="icon flagged">Установить флаг</span></a></li>
+		<li role="menuitem"><a class="icon" id="rcmbtn128" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('mark','unflagged',this,event)"><span class="icon unflagged">Снять флаг</span></a></li>
+		
+	</ul>
+</div>
+
+</div>
+
+<div id="messagesearchtools">
+
+<!-- search filter -->
+<div id="searchfilter">
+	<label for="messagessearchfilter" class="voice">Фильтр перечня сообщений</label>
+	<select name="searchfilter" class="searchfilter decorated" id="messagessearchfilter" aria-controls="messagelist" onchange="rcmail.filter_mailbox(this.value)">
+<option value="ALL" selected="selected">Все</option>
+<option value="UNSEEN">Непрочитанные</option>
+<option value="FLAGGED">Помеченные</option>
+<option value="UNANSWERED">Неотвеченные</option>
+<option value="DELETED">Удаленные</option>
+<option value="UNDELETED">Не удаленные</option>
+<option value="OR OR OR HEADER Content-Type application/ HEADER Content-Type multipart/m HEADER Content-Type multipart/signed HEADER Content-Type multipart/report">С вложением</option>
+<option value="HEADER X-PRIORITY 1">Приоритет: Высоч.</option>
+<option value="HEADER X-PRIORITY 2">Приоритет: Высокий</option>
+<option value="NOT HEADER X-PRIORITY 1 NOT HEADER X-PRIORITY 2 NOT HEADER X-PRIORITY 4 NOT HEADER X-PRIORITY 5">Приоритет: Норм.</option>
+<option value="HEADER X-PRIORITY 4">Приоритет: Низкий</option>
+<option value="HEADER X-PRIORITY 5">Приоритет: Низший</option>
+</select>
+
+</div>
+
+<!-- search box -->
+<div id="quicksearchbar" class="searchbox" role="search" aria-labelledby="aria-label-searchform">
+<h2 id="aria-label-searchform" class="voice">Форма поиска в сообщении</h2>
+<label for="quicksearchbox" class="voice">Ввод поискового запроса адресов эл.почты</label>
+<a id="searchmenulink" class="iconbutton searchoptions" title="Варианты поиска" aria-haspopup="true" aria-expanded="false" aria-owns="searchmenu-menu" role="button" href="#" onclick="return rcmail.command('menu-open','searchmenu',this,event)">Параметры</a>
+<form name="rcmqsearchform" onsubmit="rcmail.command('search'); return false" style="display:inline" action="./?_task=mail" method="get"><input name="_q" id="quicksearchbox" type="text"></form>
+
+<a id="searchreset" class="iconbutton reset" title="Сброс" role="button" href="#" onclick="return rcmail.command('reset-search','',this,event)">Сброс</a>
+
+<div id="searchmenu" class="popupmenu" data-editable="true">
+	<h3 id="aria-label-searchmenu" class="voice">Варианты поиска</h3>
+	<ul class="toolbarmenu" id="searchmenu-menu" role="menu" aria-labelledby="aria-label-searchmenu">
+		<li role="menuitem"><label><input type="checkbox" name="s_mods[]" value="subject" id="s_mod_subject" onclick="UI.set_searchmod(this)" /> <span>Тема</span></label></li>
+		<li role="menuitem"><label><input type="checkbox" name="s_mods[]" value="from" id="s_mod_from" onclick="UI.set_searchmod(this)" /> <span>От</span></label></li>
+		<li role="menuitem"><label><input type="checkbox" name="s_mods[]" value="to" id="s_mod_to" onclick="UI.set_searchmod(this)" /> <span>Кому</span></label></li>
+		<li role="menuitem"><label><input type="checkbox" name="s_mods[]" value="cc" id="s_mod_cc" onclick="UI.set_searchmod(this)" /> <span>Копия</span></label></li>
+		<li role="menuitem"><label><input type="checkbox" name="s_mods[]" value="bcc" id="s_mod_bcc" onclick="UI.set_searchmod(this)" /> <span>Скрытая</span></label></li>
+		<li role="menuitem"><label><input type="checkbox" name="s_mods[]" value="body" id="s_mod_body" onclick="UI.set_searchmod(this)" /> <span>Тело письма</span></label></li>
+		<li role="menuitem"><label><input type="checkbox" name="s_mods[]" value="text" id="s_mod_text" onclick="UI.set_searchmod(this)" /> <span>Всё сообщение</span></label></li>
+		<li role="separator" class="separator"><label>Область</label></li>
+		<li role="menuitem"><label><input type="radio" name="s_scope" value="base" id="s_scope_base" onclick="UI.set_searchscope(this)" /> <span>Текущая папка</span></label></li>
+		<li role="menuitem"><label><input type="radio" name="s_scope" value="sub" id="s_scope_sub" onclick="UI.set_searchscope(this)" /> <span>Эта и вложенные папки</span></label></li>
+		<li role="menuitem"><label><input type="radio" name="s_scope" value="all" id="s_scope_all" onclick="UI.set_searchscope(this)" /> <span>Все папки</span></label></li>
+	</ul>
+</div>
+
+</div>
+
+</div>
+
+<div id="mainscreencontent">
+<div id="mailview-left">
+
+<!-- folders list -->
+<div id="mailboxcontainer" class="uibox listbox" role="navigation" aria-labelledby="aria-label-folderlist">
+<h2 id="aria-label-folderlist" class="voice">Выбор папки эл.почты</h2>
+<div id="folderlist-content" class="scroller withfooter">
+	<ul id="mailboxlist" class="treelist listing folderlist"><li id="rcmliSU5CT1g" class="mailbox inbox selected"><a href="./?_task=mail&amp;_mbox=INBOX" onclick="return rcmail.command('list','INBOX',this,event)" rel="INBOX">Входящие</a>
+</li>
+<li id="rcmliRHJhZnRz" class="mailbox drafts"><a href="./?_task=mail&amp;_mbox=Drafts" onclick="return rcmail.command('list','Drafts',this,event)" rel="Drafts">Черновики</a>
+</li>
+<li id="rcmliU2VudA" class="mailbox sent"><a href="./?_task=mail&amp;_mbox=Sent" onclick="return rcmail.command('list','Sent',this,event)" rel="Sent">Отправленные</a>
+</li>
+<li id="rcmliU3BhbQ" class="mailbox junk"><a href="./?_task=mail&amp;_mbox=Spam" onclick="return rcmail.command('list','Spam',this,event)" rel="Spam">СПАМ</a>
+</li>
+<li id="rcmliVHJhc2g" class="mailbox trash"><a href="./?_task=mail&amp;_mbox=Trash" onclick="return rcmail.command('list','Trash',this,event)" rel="Trash">Корзина</a>
+</li>
+</ul>
+
+</div>
+<div id="folderlist-footer" class="boxfooter">
+	<a id="mailboxmenulink" title="Операции над папкой..." class="listbutton groupactions" onclick="UI.toggle_popup('mailboxmenu',event);return false" aria-haspopup="true" aria-expanded="false" aria-owns="mailboxoptionsmenu" role="button" href="#"><span class="inner">⚙</span></a>
+			<span class="voice">Квота</span>
+		<span id="quotadisplay" class="countdisplay">&nbsp;</span>
+	</div>
+</div>
+
+</div>
+
+<div id="mailview-right" role="main">
+
+<div id="mailview-top" class="uibox">
+
+
+<!-- messagelist -->
+<div id="messagelistcontainer" class="boxlistcontent">
+<h2 id="aria-label-messagelist" class="voice">Перечень сообщений эл.почты</h2>
+<table id="messagelist" class="records-table messagelist sortheader fixedheader" aria-labelledby="aria-label-messagelist"><thead><tr><th class="threads" id="rcmthreads"><a href="#list-options" onclick="return rcmail.command('menu-open', 'messagelistmenu', this, event)" class="listmenu" id="listmenulink" title="Настройки списка..." tabindex="0">Настройки списка...</a></th>
+<th class="subject" id="rcmsubject"><a href="./#sort" class="sortcol" rel="subject" title="Сортировать по">Тема</a></th>
+<th class="status" id="rcmstatus"><span class="status">Статус прочтения</span></th>
+<th class="fromto" id="rcmfromto"><a href="./#sort" class="sortcol" rel="fromto" title="Сортировать по">От</a></th>
+<th class="date" id="rcmdate"><a href="./#sort" class="sortcol" rel="date" title="Сортировать по">Дата</a></th>
+<th class="size" id="rcmsize"><a href="./#sort" class="sortcol" rel="size" title="Сортировать по">Размер</a></th>
+<th class="flag" id="rcmflag"><span class="flagged">Помеченные</span></th>
+<th class="attachment" id="rcmattachment"><span class="attachment">Вложение</span></th>
+</tr>
+</thead>
+<tbody></tbody></table>
+
+</div>
+
+<div class="voice" role="note">
+<h3>Клавиши навигации по списку</h3>
+<pre>
+Стрелки вверх/вниз: Перемещает фокус по строкам/выделение.
+Пробел: Выделяет строку на которой находится фокус.
+Shift + вверх/вниз: Выделяет дополнительную строку выше/ниже.
+Ctrl + пробел: Добавляет/удаляет строку на которой находится фокус в/из выделения.
+Стрелки вправо/влево: раскрыть/свернуть сообщения обсуждения (только в режиме просмотра обсуждений).
+Enter: Открыть выделенное сообщение.
+Delete: Переместить выбранные сообщения в Корзину.
+</pre>
+</div>
+
+<!-- list footer -->
+<div id="messagelistfooter">
+	<div id="listcontrols">
+		<a href="#list" class="iconbutton listmode disabled" id="maillistmode" title="Список" role="button" tabindex="-1" aria-disabled="true" onclick="return rcmail.command('set-listmode','list',this,event)">List</a>
+		<a href="#threads" class="iconbutton threadmode disabled" id="mailthreadmode" title="Обсуждения" role="button" tabindex="-1" aria-disabled="true" onclick="return rcmail.command('set-listmode','threads',this,event)">Threads</a>
+	</div>
+	
+	<div id="listselectors">
+	<a href="#select" id="listselectmenulink" class="menuselector" onclick="UI.toggle_popup('listselectmenu', event);return false" aria-haspopup="true" aria-expanded="false" aria-owns="listselectmenu-menu"><span class="handle">Выбрать</span></a>
+			&nbsp; <a href="#threads" id="threadselectmenulink" class="menuselector" onclick="UI.toggle_popup('threadselectmenu', event);return false" aria-haspopup="true" aria-expanded="false" aria-owns="threadselectmenu-menu"><span class="handle">Обсуждения</span></a>
+		</div>
+
+	<div id="countcontrols" class="pagenav dark">
+		<span class="countdisplay" aria-live="polite" aria-relevant="text" id="rcmcountdisplay">Почтовый ящик пуст</span>
+		<span class="pagenavbuttons">
+		<a class="button firstpage disabled" title="Показать первую страницу" id="rcmbtn129" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('firstpage','',this,event)"><span class="inner">Первое</span></a>
+		<a class="button prevpage disabled" title="Показать предыдущую страницу" id="rcmbtn130" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('previouspage','',this,event)"><span class="inner">Предыдущее</span></a>
+		<a class="button nextpage disabled" title="Показать следующую страницу" id="rcmbtn131" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('nextpage','',this,event)"><span class="inner">Следующее</span></a>
+		<a class="button lastpage disabled" title="Показать последнюю страницу" id="rcmbtn132" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('lastpage','',this,event)"><span class="inner">Последнее</span></a>
+		</span>
+	</div>
+
+	
+
+	<a href="#preview" id="mailpreviewtoggle" class="iconbutton" title="Показать панель превью" role="button" tabindex="0">Показать панель превью</a>
+</div>
+
+</div><!-- end mailview-top -->
+
+<div id="mailview-bottom" class="uibox">
+
+<div id="mailpreviewframe" class="iframebox" role="complementary" aria-labelledby="aria-label-mailpreviewframe">
+<h2 id="aria-label-mailpreviewframe" class="voice">Предпросмотр сообщений</h2>
+<iframe name="messagecontframe" id="messagecontframe" style="width:100%; height:100%" frameborder="0" src="skins/outlook/watermark.html" title="Предпросмотр сообщений"></iframe>
+</div>
+
+</div><!-- end mailview-bottom -->
+
+</div><!-- end mailview-right -->
+
+</div><!-- end mainscreencontent -->
+
+</div><!-- end mainscreen -->
+
+<div id="dragmessagemenu" class="popupmenu" aria-hidden="true">
+	<ul class="toolbarmenu" role="menu">
+		<li role="menuitem"><a onclick="return rcmail.drag_menu_action('move')" id="rcmbtn133" role="button" href="#">Переместить</a></li>
+		<li role="menuitem"><a onclick="return rcmail.drag_menu_action('copy')" id="rcmbtn134" role="button" href="#">Копировать</a></li>
+	</ul>
+</div>
+
+<div id="mailboxmenu" class="popupmenu" aria-hidden="true">
+	<h3 id="aria-label-mailboxmenu" class="voice">Меню действий над папкой</h3>
+	<ul class="toolbarmenu" id="mailboxoptionsmenu" role="menu" aria-labelledby="aria-label-mailboxmenu">
+		<li role="menuitem"><a id="rcmbtn135" role="button" href="#" onclick="return rcmail.command('expunge','',this,event)">Сжать</a></li>
+		<li role="menuitem"><a id="rcmbtn136" role="button" href="#" onclick="return rcmail.command('purge','',this,event)">Опустошить</a></li>
+		<li role="menuitem"><a onclick="if(rcmail.command_enabled('import-messages'))UI.show_uploadform();return false" id="rcmbtn137" role="button" href="#">Импорт сообщений</a></li>
+		<li role="menuitem"><a id="rcmbtn138" role="button" href="./?_task=settings&amp;_action=folders" class="active">Управление папками</a></li>
+		
+	</ul>
+</div>
+
+<div id="listselectmenu" class="popupmenu dropdown" aria-hidden="true">
+	<h3 id="aria-label-listselectmenu" class="voice">Меню выделения списка</h3>
+	<ul id="listselectmenu-menu" class="toolbarmenu iconized" role="menu" aria-labelledby="aria-label-listselectmenu">
+		<li role="menuitem"><a class="icon" id="rcmbtn139" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('select-all','',this,event)"><span class="icon mail">Все</span></a></li>
+		<li role="menuitem"><a class="icon" id="rcmbtn140" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('select-all','page',this,event)"><span class="icon list">Текущая страница</span></a></li>
+		<li role="menuitem"><a class="icon" id="rcmbtn141" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('select-all','unread',this,event)"><span class="icon unread">Непрочитанные</span></a></li>
+		<li role="menuitem"><a class="icon" id="rcmbtn142" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('select-all','flagged',this,event)"><span class="icon flagged">Помеченные</span></a></li>
+		<li role="menuitem"><a class="icon" id="rcmbtn143" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('select-all','invert',this,event)"><span class="icon invert">Инвертировать</span></a></li>
+		<li role="menuitem"><a class="icon" id="rcmbtn144" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('select-none','',this,event)"><span class="icon cross">Отсутствует</span></a></li>
+	</ul>
+</div>
+
+<div id="threadselectmenu" class="popupmenu dropdown" aria-hidden="true">
+	<h3 id="aria-label-threadselectmenu" class="voice">Меню списка обсуждений</h3>
+	<ul id="threadselectmenu-menu" class="toolbarmenu" role="menu" aria-labelledby="aria-label-threadselectmenu">
+		<li role="menuitem"><a class="icon" id="rcmbtn145" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('expand-all','',this,event)"><span class="icon conversation">Развернуть все</span></a></li>
+		<li role="menuitem"><a class="icon" id="rcmbtn146" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('expand-unread','',this,event)"><span class="icon conversation">Развернуть непрочитанные</span></a></li>
+		<li role="menuitem"><a class="icon" id="rcmbtn147" role="button" tabindex="-1" aria-disabled="true" href="#" onclick="return rcmail.command('collapse-all','',this,event)"><span class="icon conversation">Свернуть все</span></a></li>
+	</ul>
+</div>
+
+<div id="listoptions" class="propform popupdialog" role="dialog" aria-labelledby="aria-label-listoptions" aria-hidden="true">
+<h2 id="aria-label-listoptions" class="voice">Параметры отображение списка сообщений и упорядочивания</h2>
+	<fieldset class="floating">
+		<legend>Колонки</legend>
+		<ul class="proplist">
+			<li><label class="disabled"><input type="checkbox" name="list_col[]" value="threads" checked="checked" disabled="disabled" /> <span>Обсуждения</span></label></li>
+			<li><label class="disabled"><input type="checkbox" name="list_col[]" value="subject" checked="checked" disabled="disabled" /> <span>Тема</span></label></li>
+			<li><label><input type="checkbox" name="list_col[]" value="fromto" /> <span>Отправитель/Получатель</span></label></li>
+			<li><label><input type="checkbox" name="list_col[]" value="from" /> <span>От</span></label></li>
+			<li><label><input type="checkbox" name="list_col[]" value="to" /> <span>Кому</span></label></li>
+			<li><label><input type="checkbox" name="list_col[]" value="replyto" /> <span>Ответить</span></label></li>
+			<li><label><input type="checkbox" name="list_col[]" value="cc" /> <span>Копия</span></label></li>
+			<li><label><input type="checkbox" name="list_col[]" value="date" /> <span>Дата</span></label></li>
+			<li><label><input type="checkbox" name="list_col[]" value="size" /> <span>Размер</span></label></li>
+			<li><label><input type="checkbox" name="list_col[]" value="status" /> <span>Статус прочтения</span></label></li>
+			<li><label><input type="checkbox" name="list_col[]" value="attachment" /> <span>Вложение</span></label></li>
+			<li><label><input type="checkbox" name="list_col[]" value="flag" /> <span>Флаг</span></label></li>
+			<li><label><input type="checkbox" name="list_col[]" value="priority" /> <span>Приоритет</span></label></li>
+		</ul>
+	</fieldset>
+			<fieldset class="floating">
+		<legend>Сортировать по</legend>
+		<ul class="proplist">
+			<li><label><input type="radio" name="sort_col" value="" /> <span>Отсутствует</span></label></li>
+			<li><label><input type="radio" name="sort_col" value="arrival" /> <span>Дата получения</span></label></li>
+			<li><label><input type="radio" name="sort_col" value="date" /> <span>Дата отправки</span></label></li>
+			<li><label><input type="radio" name="sort_col" value="subject" /> <span>Тема</span></label></li>
+			<li><label><input type="radio" name="sort_col" value="fromto" /> <span>Отправитель/Получатель</span></label></li>
+			<li><label><input type="radio" name="sort_col" value="from" /> <span>От</span></label></li>
+			<li><label><input type="radio" name="sort_col" value="to" /> <span>Кому</span></label></li>
+			<li><label><input type="radio" name="sort_col" value="cc" /> <span>Копия</span></label></li>
+			<li><label><input type="radio" name="sort_col" value="size" /> <span>Размер</span></label></li>
+		</ul>
+	</fieldset>
+			<fieldset class="floating">
+		<legend>Порядок сортировки</legend>
+		<ul class="proplist">
+			<li><label><input type="radio" name="sort_ord" value="ASC" /> <span>по возрастанию</span></label></li>
+			<li><label><input type="radio" name="sort_ord" value="DESC" /> <span>по убыванию</span></label></li>
+		</ul>
+	</fieldset>
+		<br style="clear:both" />
+	<div class="formbuttons">
+		<input id="listmenusave" type="button" class="button mainaction" onclick="return rcmail.command('menu-save','',this,event)" value="Сохранить" disabled="disabled">
+		<input id="listmenucancel" type="button" class="button" onclick="return rcmail.command('menu-close','messagelistmenu',this,event)" value="Отмена" disabled="disabled">
+	</div>
+</div>
+
+<div id="upload-dialog" class="propform popupdialog" title="Импорт сообщений" aria-hidden="true">
+	<h2 id="aria-label-uploaddialog" class="voice">Диалог импорта сообщения</h2>
+	<div id="uploadform"><form id="uploadformFrm" method="post" enctype="multipart/form-data" action="./?_task=mail">
+<input type="hidden" name="_token" value="bb63484f71116a8a998676db194f2039"><input type="hidden" name="_unlock" value=""><input type="hidden" name="_framed" value="1"><div><input type="file" name="_file[]" multiple="multiple" accept=".eml, .mbox, message/rfc822, text/*"></div>
+<div class="hint">Максимальный размер файла 30 МБ</div>
+</form>
+</div>
+
+	<div class="formbuttons">
+		<input type="button" class="button mainaction" id="rcmbtn148" onclick="return rcmail.command('import-messages','',this,event)" value="Загрузить" disabled="disabled">
+		<input type="button" class="button" onclick="UI.show_uploadform()" id="rcmbtn149" value="Отмена">
+	</div>
+</div>
+
+<div id="messagestack"></div>
+
+<script type="text/javascript">
+
+// UI startup
+var UI = new rcube_mail_ui();
+$(document).ready(function(){
+	UI.set('errortitle', 'Произошла ошибка!');
+	UI.set('toggleoptions', 'Дополнительные параметры');
+	UI.init();
+});
+
+</script>
+
+
+
+
+<script>rcs_label_back = 'Назад';rcs_label_folders = 'Папки';rcs_label_search = 'Быстрый поиск';rcs_label_options = 'Параметры';rcs_label_attachment = 'Вложение';rcs_label_folders = 'Папки';rcs_label_section = 'Раздел';rcs_label_skin = 'Стиль оформления';rcs_label_login = 'Войти';rcs_label_disable_mobile_skin = 'Используйте оформление для ПК';rcs_label_enable_mobile_skin = 'Используйте мобильное оформление';rcs_config_product_name = 'Roundcube Webmail';rcs_disable_login_logo = false;rcs_disable_colors = false;rcs_disable_login_taskbar_outgoing = false;$('body').addClass('rcs-desktop rcs-desktop-skin xdesktop');if (typeof rcs_common != 'undefined') {rcs_common.runBeforeReady();$(document).ready(function() { rcs_common.runOnReady(); });}</script><script type="text/javascript">
+
+jQuery.extend(jQuery.ui.dialog.prototype.options.position, {
+                using: function(pos) {
+                    var me = jQuery(this),
+                        offset = me.css(pos).offset(),
+                        topOffset = offset.top - 12;
+                    if (topOffset < 0)
+                        me.css('top', pos.top - topOffset);
+                    if (offset.left + me.outerWidth() + 12 > jQuery(window).width())
+                        me.css('left', pos.left - 12);
+                }
+            });
+$(document).ready(function(){ 
+rcmail.init();
+rcmail.set_quota({"used":74349,"total":4294967296,"percent":0,"free":100,"type":"text","folder":"INBOX","title":"72 \u041c\u0411 \/ 4096 \u0413\u0411 (0%)"});
+});
+</script>
+
+</body>
+</html>

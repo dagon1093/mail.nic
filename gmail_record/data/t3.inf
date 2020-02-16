@@ -1,0 +1,11 @@
+[t3]
+FileName1=t3.html
+URL1=https://mail.nic.ru/proxy/json_auth.php
+Total=1
+RequestHeaderFile=t3_RequestHeader.txt
+RequestBodyFile=t3_RequestBody.txt
+ResponseHeaderFile=t3_ResponseHeader.txt
+ContentType=application/json
+SnapshotXmlFile=snapshot_3.xml
+[ProtocolInfo]
+ProtocolId=QTWeb

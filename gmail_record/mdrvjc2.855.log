@@ -1,0 +1,56 @@
+Start auto log messages stack - Iteration 316.	[MsgId: MMSG-10545]
+Action.c(84): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+Action.c(84): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+Action.c(95): web_reg_find started  	[MsgId: MMSG-26355]
+Action.c(95): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Action.c(99): web_url("roundcubemail") started  	[MsgId: MMSG-26355]
+Action.c(99): Detected non-resource "https://mail.nic.ru/roundcubemail/skins/outlook/watermark.html" in "https://mail.nic.ru/roundcubemail/?_task=mail"  	[MsgId: MMSG-26574]
+Action.c(99): ssl_handle_status encounter error : SSL_ERROR_SYSCALL, error id : 0  	[MsgId: MMSG-26000]
+Action.c(99): Error -27776: [GENERAL_MSG_CAT_SSL_ERROR]connect to host "mail.nic.ru" failed: [10054] Connection reset by peer
+This is probably because the SSL protocol version is not supported. Try switching the TLS/SSL version using "web_set_sockets_option" API.  	[MsgId: MERR-27776]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 317.	[MsgId: MMSG-10545]
+Action.c(31): web_reg_find started  	[MsgId: MMSG-26355]
+Action.c(31): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Action.c(35): web_url("www.mail.nic.ru") started  	[MsgId: MMSG-26355]
+Action.c(35): Registered web_reg_find successful for "Text=Электронная почта от RU-CENTER" (count=1)  	[MsgId: MMSG-26364]
+Action.c(35): web_url("www.mail.nic.ru") was successful, 1575 body bytes, 239 header bytes  	[MsgId: MMSG-26386]
+Action.c(45): Notify: Transaction "0_homepage" ended with a "Pass" status (Duration: 0,0339 Wasted Time: 0,0013).	[MsgId: MMSG-16871]
+Action.c(51): Notify: Transaction "1_login" started.	[MsgId: MMSG-16999]
+Action.c(53): web_custom_request("json_auth.php") started  	[MsgId: MMSG-26355]
+Action.c(53): ssl_handle_status encounter error : SSL_ERROR_SYSCALL, error id : 0  	[MsgId: MMSG-26000]
+Action.c(53): Error -27776: [GENERAL_MSG_CAT_SSL_ERROR]connect to host "mail.nic.ru" failed: [10054] Connection reset by peer
+This is probably because the SSL protocol version is not supported. Try switching the TLS/SSL version using "web_set_sockets_option" API.  	[MsgId: MERR-27776]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 318.	[MsgId: MMSG-10545]
+Action.c(84): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+Action.c(84): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+Action.c(95): web_reg_find started  	[MsgId: MMSG-26355]
+Action.c(95): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Action.c(99): web_url("roundcubemail") started  	[MsgId: MMSG-26355]
+Action.c(99): Detected non-resource "https://mail.nic.ru/roundcubemail/skins/outlook/watermark.html" in "https://mail.nic.ru/roundcubemail/?_task=mail"  	[MsgId: MMSG-26574]
+Action.c(99): ssl_handle_status encounter error : SSL_ERROR_SYSCALL, error id : 0  	[MsgId: MMSG-26000]
+Action.c(99): Error -27776: [GENERAL_MSG_CAT_SSL_ERROR]connect to host "mail.nic.ru" failed: [10054] Connection reset by peer
+This is probably because the SSL protocol version is not supported. Try switching the TLS/SSL version using "web_set_sockets_option" API.  	[MsgId: MERR-27776]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
+Start auto log messages stack - Iteration 360.	[MsgId: MMSG-10545]
+Action.c(53): web_custom_request("json_auth.php") was successful, 0 body bytes, 448 header bytes  	[MsgId: MMSG-26386]
+Action.c(64): web_custom_request("json_auth.php_2") started  	[MsgId: MMSG-26355]
+Action.c(64): web_custom_request("json_auth.php_2") was successful, 91 body bytes, 678 header bytes, 11 chunking overhead bytes  	[MsgId: MMSG-26385]
+Action.c(84): web_reg_save_param_regexp started  	[MsgId: MMSG-26355]
+Action.c(84): Registering web_reg_save_param_regexp was successful  	[MsgId: MMSG-26390]
+Action.c(95): web_reg_find started  	[MsgId: MMSG-26355]
+Action.c(95): Registering web_reg_find was successful  	[MsgId: MMSG-26390]
+Action.c(99): web_url("roundcubemail") started  	[MsgId: MMSG-26355]
+Action.c(99): Error -35049: No match found for the requested parameter "_token". Check whether the requested regular expression exists in the response data  	[MsgId: MERR-35049]
+Action.c(99): Error -26366: "Text=Copyright" not found for web_reg_find  	[MsgId: MERR-26366]
+Action.c(99): Error -26374: The above "not found" error(s) may be explained by header and body byte counts being 187 and 0, respectively.  	[MsgId: MERR-26374]
+End auto log messages stack.	[MsgId: MMSG-10544]
+
+
